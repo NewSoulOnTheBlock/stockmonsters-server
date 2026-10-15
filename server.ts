@@ -122,6 +122,9 @@ type Player = {
   g: number; n: number; x: number; y: number; f: number; e: number; gfx: number;
   lastChat: number;
   lastPos: number;
+  voice: boolean;      // in proximity voice chat
+  rtcWindow: number;   // start of the current signaling rate window
+  rtcCount: number;
 };
 
 const players = new Map<string, Player>();
@@ -344,7 +347,34 @@ const cleanText = (v: unknown, max: number) =>
 const mapTopic = (map: string) => `map:${map}`;
 const publicView = (p: Player) => ({
   id: p.id, name: p.name, wallet: p.wallet ? shortWallet(p.wallet) : null, g: p.g, n: p.n, x: p.x, y: p.y, f: p.f, e: p.e, gfx: p.gfx,
+  voice: p.voice,
 });
+
+// ---- proximity voice ---------------------------------------------------------
+// Audio is peer-to-peer (WebRTC); the server only relays the offer/answer/ICE
+// handshakes, and only between two signed-in players on the same map who both
+// turned voice on.
+const RTC_MAX_BYTES = 16_000;
+const RTC_WINDOW_MS = 10_000;
+const RTC_MAX_PER_WINDOW = 80;
+
+function onVoice(ws: ServerWebSocket<Player>, m: any) {
+  const p = ws.data;
+  p.voice = !!m.on;
+  if (p.map) server.publish(mapTopic(p.map), JSON.stringify({ t: "voice", id: p.id, on: p.voice }));
+}
+
+function onRtc(ws: ServerWebSocket<Player>, m: any) {
+  const p = ws.data;
+  const target = players.get(String(m.to));
+  if (!p.voice || !target || !target.voice || target.id === p.id || !p.map || target.map !== p.map) return;
+  const now = Date.now();
+  if (now - p.rtcWindow > RTC_WINDOW_MS) { p.rtcWindow = now; p.rtcCount = 0; }
+  if (++p.rtcCount > RTC_MAX_PER_WINDOW) return;
+  const data = JSON.stringify(m.data ?? null);
+  if (data.length > RTC_MAX_BYTES) return;
+  sendTo(target.id, { t: "rtc", from: p.id, data: JSON.parse(data) });
+}
 
 function send(ws: ServerWebSocket<Player>, msg: unknown) {
   ws.send(JSON.stringify(msg));
@@ -440,6 +470,7 @@ const server = Bun.serve<Player>({
       const p: Player = {
         id: String(nextId++), name: "TRAINER", gender: 0, wallet: null, map: null,
         g: 0, n: 0, x: 0, y: 0, f: 1, e: 0, gfx: 0, lastChat: 0, lastPos: 0,
+        voice: false, rtcWindow: 0, rtcCount: 0,
       };
       return srv.upgrade(req, { data: p }) ? undefined : new Response("upgrade failed", { status: 400 });
     }
@@ -481,6 +512,8 @@ const server = Bun.serve<Player>({
         // Everything below needs a signed-in wallet; anonymous sockets only listen.
         case "pos": if (ws.data.wallet) onPos(ws, m); break;
         case "chat": if (ws.data.wallet) onChat(ws, m); break;
+        case "voice": if (ws.data.wallet) onVoice(ws, m); break;
+        case "rtc": if (ws.data.wallet) onRtc(ws, m); break;
         default:
           if (ws.data.wallet && typeof m?.t === "string" && m.t.startsWith("trade_")) onTrade(ws, m);
           else if (ws.data.wallet && typeof m?.t === "string" && (m.t.startsWith("battle_") || m.t.startsWith("link_"))) onBattle(ws, m);
