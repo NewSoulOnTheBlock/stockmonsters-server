@@ -1,0 +1,6390 @@
+{
+"numSpecies": 412,
+"names": {
+"0": "??????????",
+"1": "APPLION",
+"2": "OPTOLISK",
+"3": "ABCELLYX",
+"4": "NVIDRAKE",
+"5": "ADOBEMOTH",
+"6": "AEHRION",
+"7": "TESLAZAR",
+"8": "AEGISURGE",
+"9": "ALABYRINTH",
+"10": "AMDEON",
+"11": "AMATHERIUM",
+"12": "AMBARAVEN",
+"13": "COINRAITH",
+"14": "AMCTHULHU",
+"15": "AMKORAX",
+"16": "METAMORPH",
+"17": "ANETHERON",
+"18": "APLIDRA",
+"19": "PALANTHEON",
+"20": "APPALLON",
+"21": "NETFLIXIS",
+"22": "ASMOLITH",
+"23": "AMAZORGON",
+"24": "ASTRAPHIM",
+"25": "AURORYX",
+"26": "AVAVULTURE",
+"27": "AVGOLIATH",
+"28": "AXONYX",
+"29": "AXTIGER",
+"30": "BOEWYRM",
+"31": "BABAROC",
+"32": "BLACKBRIAR",
+"33": "BLOOMWICK",
+"34": "BONDWARDEN",
+"35": "BULLWARK",
+"36": "CEREBRAXIS",
+"37": "GOOGOLEM",
+"38": "CARNIVYRE",
+"39": "COSTAURUS",
+"40": "STELLYON",
+"41": "MICROSTRYX",
+"42": "CELSYRAX",
+"43": "CIENATH",
+"44": "CLOVYRE",
+"45": "CELESTRIX",
+"46": "SPARKRAKEN",
+"47": "COHRYST",
+"48": "MICROTUSK",
+"49": "CIRCULITH",
+"50": "CREDORYX",
+"51": "SALESPHINX",
+"52": "CROWDSTRYX",
+"53": "COREWEAVER",
+"54": "CISCOLOSS",
+"55": "COGNIZARCH",
+"56": "CARVANAUT",
+"57": "DATAHOUND",
+"58": "DELLMENTAL",
+"59": "DJTITAN",
+"60": "DOCNEREID",
+"61": "ELFYRE",
+"62": "FORMOSAUR",
+"63": "HANGULDRA",
+"64": "FORDRAKE",
+"65": "FICOLITH",
+"66": "FIGMAW",
+"67": "FISERVOK",
+"68": "FIXARACH",
+"69": "FLUENCER",
+"70": "FIREFLYRE",
+"71": "FORTINAUT",
+"72": "FUTUROS",
+"73": "GELIATHAN",
+"74": "GEVORTEX",
+"75": "GILDRAKE",
+"76": "GLASSWYRM",
+"77": "GALAXEON",
+"78": "GMEMELEON",
+"79": "HULLIATH",
+"80": "HIMSALVE",
+"81": "HPEGASUS",
+"82": "HOWMETHEUS",
+"83": "IBMOLOCH",
+"84": "IBREXIS",
+"85": "INDAVATAR",
+"86": "INFLEQUIN",
+"87": "INODRONE",
+"88": "INTELISK",
+"89": "INTUIVORE",
+"90": "IONQUARK",
+"91": "IRENDRA",
+"92": "JABILISK",
+"93": "JOHNSONYX",
+"94": "JOBYRD",
+"95": "KLACOLYTH",
+"96": "KOHLOSSUS",
+"97": "KRATOSSUS",
+"98": "HARRIXEN",
+"99": "LUMENTHRA",
+"100": "LLYXIR",
+"101": "LOCKHEEDRA",
+"102": "LRCYCLOPS",
+"103": "LULULYTH",
+"104": "LUNARCH",
+"105": "MONGODRAKE",
+"106": "MODRAKE",
+"107": "RDDTROLL",
+"108": "REDWYRM",
+"109": "RIGETYPHON",
+"110": "FARTWEEZE",
+"111": "RIVYATHAN",
+"112": "ROCKETYR",
+"113": "SUNRUNNER",
+"114": "MONOLITHAN",
+"115": "ECHOSATYR",
+"116": "DIVIDRAKE",
+"117": "SGOVAULT",
+"118": "SHOPIFYRE",
+"119": "SHYREN",
+"120": "SIMOTION",
+"121": "SKHYDRA",
+"122": "SLSERUM",
+"123": "MODERNYX",
+"124": "SILVYRM",
+"125": "SMCIMERA",
+"126": "SPEXMAR",
+"127": "SMHELIX",
+"128": "SMRCORE",
+"129": "MARVELLON",
+"130": "MTSIREN",
+"131": "MICRONOTH",
+"132": "USELESSTO",
+"133": "MUCHWOW",
+"134": "SNAPJAW",
+"135": "SANDWYRM",
+"136": "SNOWYRM",
+"137": "MEMERYGON",
+"138": "SOFINIX",
+"139": "SOUNDHOWL",
+"140": "ORDINITE",
+"141": "SOXXOLITH",
+"142": "SPACEXODUS",
+"143": "MOMENTYR",
+"144": "SPYRANT",
+"145": "TENERGON",
+"146": "ATLASSIANT",
+"147": "MAXLINYX",
+"148": "TEMPGUARD",
+"149": "NAVNOMAD",
+"150": "TERADON",
+"151": "TSEMTITAN",
+"152": "FOUNDRAKE",
+"153": "TRADEGHAST",
+"154": "NEBULISK",
+"155": "TAKEWYRM",
+"156": "UMCRON",
+"157": "UNHYDRA",
+"158": "UPSURGE",
+"159": "USARONYX",
+"160": "USOLEVIATH",
+"161": "VICROAR",
+"162": "VERTIVORE",
+"163": "VIASATYR",
+"164": "VISTRIKE",
+"165": "VTITAN",
+"166": "NETCUMULUS",
+"167": "WDAYWALKER",
+"168": "NANONUKE",
+"169": "WDCACHE",
+"170": "NOWARDEN",
+"171": "NUVORA",
+"172": "TERAWULF",
+"173": "WYFIBER",
+"174": "WENPUFF",
+"175": "XLKRAKEN",
+"176": "XANADUIR",
+"177": "XOMOLOCH",
+"178": "ZOOMORPH",
+"179": "ZSCEPTRE",
+"180": "PEPETOAD",
+"181": "NAVITUSK",
+"182": "FLOKRAG",
+"183": "OKLONYX",
+"184": "NEIROFROU",
+"185": "MOGGRIN",
+"186": "BRETTOAD",
+"187": "BOMESAGE",
+"188": "PONKEY",
+"189": "MICHIWHISK",
+"190": "GOATROPHET",
+"191": "PNUTKIN",
+"192": "CHILLBEAR",
+"193": "ONYXIDE",
+"194": "FWOGGO",
+"195": "MOODANGO",
+"196": "PENGUPLUP",
+"197": "HARAMBRO",
+"198": "DEGENAGGY",
+"199": "SNEKRAFTY",
+"200": "TOSHIMEW",
+"201": "DELISTED",
+"202": "ACTMUSE",
+"203": "MILADYOW",
+"204": "RATSBY",
+"205": "BOBOCUB",
+"206": "APUFROLIC",
+"207": "KEYCATTEN",
+"208": "HOSICAT",
+"209": "MYROPUP",
+"210": "SAMOYETI",
+"211": "GOKUCHAMP",
+"212": "KIBHERD",
+"213": "CROCOROK",
+"214": "QUACKLETT",
+"215": "ONTOLITH",
+"216": "WIFPUP",
+"217": "DELISTED",
+"218": "DELISTED",
+"219": "PUMPCARGO",
+"220": "DELISTED",
+"221": "DELISTED",
+"222": "DELISTED",
+"223": "ORACLYSM",
+"224": "DELISTED",
+"225": "DELISTED",
+"226": "DELISTED",
+"227": "DELISTED",
+"228": "ASTROHOUND",
+"229": "BONKHOUND",
+"230": "DELISTED",
+"231": "DELISTED",
+"232": "DELISTED",
+"233": "DELISTED",
+"234": "DELISTED",
+"235": "WOJAKI",
+"236": "DELISTED",
+"237": "DELISTED",
+"238": "DELISTED",
+"239": "DELISTED",
+"240": "DELISTED",
+"241": "DELISTED",
+"242": "DELISTED",
+"243": "DELISTED",
+"244": "DELISTED",
+"245": "DELISTED",
+"246": "OUSTRIDER",
+"247": "DELISTED",
+"248": "DELISTED",
+"249": "DELISTED",
+"250": "DELISTED",
+"251": "DELISTED",
+"252": "DELISTED",
+"253": "DELISTED",
+"254": "DELISTED",
+"255": "DELISTED",
+"256": "DELISTED",
+"257": "DELISTED",
+"258": "DELISTED",
+"259": "DELISTED",
+"260": "DELISTED",
+"261": "DELISTED",
+"262": "DELISTED",
+"263": "DELISTED",
+"264": "DELISTED",
+"265": "DELISTED",
+"266": "DELISTED",
+"267": "DELISTED",
+"268": "DELISTED",
+"269": "DELISTED",
+"270": "DELISTED",
+"271": "DELISTED",
+"272": "DELISTED",
+"273": "DELISTED",
+"274": "DELISTED",
+"275": "DELISTED",
+"276": "DELISTED",
+"277": "DELISTED",
+"278": "PURION",
+"279": "DELISTED",
+"280": "DELISTED",
+"281": "COQUSKEN",
+"282": "DELISTED",
+"283": "DELISTED",
+"284": "DELISTED",
+"285": "DELISTED",
+"286": "BABYPUP",
+"287": "SHIBAZAN",
+"288": "KISHUZIG",
+"289": "AKITAKO",
+"290": "DELISTED",
+"291": "DELISTED",
+"292": "DELISTED",
+"293": "DELISTED",
+"294": "DELISTED",
+"295": "PANWARDEN",
+"296": "PATHYRION",
+"297": "PENGULITH",
+"298": "DELISTED",
+"299": "DELISTED",
+"300": "DELISTED",
+"301": "DELISTED",
+"302": "DELISTED",
+"303": "DELISTED",
+"304": "DELISTED",
+"305": "DELISTED",
+"306": "DELISTED",
+"307": "DELISTED",
+"308": "DELISTED",
+"309": "DELISTED",
+"310": "DELISTED",
+"311": "DELISTED",
+"312": "DELISTED",
+"313": "DELISTED",
+"314": "DELISTED",
+"315": "POPCATTA",
+"316": "MEWCATTA",
+"317": "DELISTED",
+"318": "DELISTED",
+"319": "DELISTED",
+"320": "DELISTED",
+"321": "TURBOSHELL",
+"322": "SABLETROLL",
+"323": "QUBITWYRM",
+"324": "QCOMET",
+"325": "DELISTED",
+"326": "DELISTED",
+"327": "DELISTED",
+"328": "DELISTED",
+"329": "NASDRAKE",
+"330": "DELISTED",
+"331": "DELISTED",
+"332": "POETHEON",
+"333": "DELISTED",
+"334": "POWLVOLT",
+"335": "DELISTED",
+"336": "GIGACHARD",
+"337": "VOLTRIKE",
+"338": "DOGGOMOON",
+"339": "DELISTED",
+"340": "DELISTED",
+"341": "DELISTED",
+"342": "DELISTED",
+"343": "DELISTED",
+"344": "DELISTED",
+"345": "DELISTED",
+"346": "QUBITRON",
+"347": "DELISTED",
+"348": "DELISTED",
+"349": "DELISTED",
+"350": "PLANETHEON",
+"351": "DELISTED",
+"352": "DELISTED",
+"353": "DELISTED",
+"354": "DELISTED",
+"355": "DELISTED",
+"356": "DELISTED",
+"357": "DELISTED",
+"358": "DELISTED",
+"359": "HIGHERARIA",
+"360": "DELISTED",
+"361": "DELISTED",
+"362": "DELISTED",
+"363": "DELISTED",
+"364": "MUMULOTH",
+"365": "SIGMAROTH",
+"366": "SLERFLOTH",
+"367": "DELISTED",
+"368": "DELISTED",
+"369": "DELISTED",
+"370": "DELISTED",
+"371": "DELISTED",
+"372": "DELISTED",
+"373": "DELISTED",
+"374": "DELISTED",
+"375": "DELISTED",
+"376": "DELISTED",
+"377": "DELISTED",
+"378": "DELISTED",
+"379": "QUANTSURGE",
+"380": "PERMYRE",
+"381": "DELISTED",
+"382": "DELISTED",
+"383": "DELISTED",
+"384": "DELISTED",
+"385": "DELISTED",
+"386": "DELISTED",
+"387": "DELISTED",
+"388": "DELISTED",
+"389": "DELISTED",
+"390": "DELISTED",
+"391": "DELISTED",
+"392": "PFYRE",
+"393": "DELISTED",
+"394": "DELISTED",
+"395": "DELISTED",
+"396": "DELISTED",
+"397": "DELISTED",
+"398": "DELISTED",
+"399": "A16ZOID",
+"400": "DELISTED",
+"401": "DELISTED",
+"402": "DELISTED",
+"403": "DELISTED",
+"404": "DELISTED",
+"405": "DELISTED",
+"406": "DELISTED",
+"407": "ROBLOXIS",
+"408": "RCATAMOUNT",
+"409": "DELISTED",
+"410": "DELISTED",
+"411": "DELISTED"
+},
+"info": {
+"1": {
+"slot": "BULBASAUR",
+"ticker": "AAPL",
+"base": [
+45,
+49,
+49,
+45,
+65,
+65
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"2": {
+"slot": "IVYSAUR",
+"ticker": "AAOI",
+"base": [
+60,
+62,
+63,
+60,
+80,
+80
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"3": {
+"slot": "VENUSAUR",
+"ticker": "ABCL",
+"base": [
+80,
+82,
+83,
+80,
+100,
+100
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"4": {
+"slot": "CHARMANDER",
+"ticker": "NVDA",
+"base": [
+39,
+52,
+43,
+65,
+60,
+50
+],
+"types": [
+"BLAZE"
+]
+},
+"5": {
+"slot": "CHARMELEON",
+"ticker": "ADBE",
+"base": [
+58,
+64,
+58,
+80,
+80,
+65
+],
+"types": [
+"BLAZE"
+]
+},
+"6": {
+"slot": "CHARIZARD",
+"ticker": "AEHR",
+"base": [
+78,
+84,
+78,
+100,
+109,
+85
+],
+"types": [
+"BLAZE",
+"WIND"
+]
+},
+"7": {
+"slot": "SQUIRTLE",
+"ticker": "TSLA",
+"base": [
+44,
+48,
+65,
+43,
+50,
+64
+],
+"types": [
+"TIDE"
+]
+},
+"8": {
+"slot": "WARTORTLE",
+"ticker": "AEIS",
+"base": [
+59,
+63,
+80,
+58,
+65,
+80
+],
+"types": [
+"TIDE"
+]
+},
+"9": {
+"slot": "BLASTOISE",
+"ticker": "ALAB",
+"base": [
+79,
+83,
+100,
+78,
+85,
+105
+],
+"types": [
+"TIDE"
+]
+},
+"10": {
+"slot": "CATERPIE",
+"ticker": "AMD",
+"base": [
+45,
+30,
+35,
+45,
+20,
+20
+],
+"types": [
+"SWARM"
+]
+},
+"11": {
+"slot": "METAPOD",
+"ticker": "AMAT",
+"base": [
+50,
+20,
+55,
+30,
+25,
+25
+],
+"types": [
+"SWARM"
+]
+},
+"12": {
+"slot": "BUTTERFREE",
+"ticker": "AMBA",
+"base": [
+60,
+45,
+50,
+70,
+80,
+80
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"13": {
+"slot": "WEEDLE",
+"ticker": "COIN",
+"base": [
+40,
+35,
+30,
+50,
+20,
+20
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"14": {
+"slot": "KAKUNA",
+"ticker": "AMC",
+"base": [
+45,
+25,
+50,
+35,
+25,
+25
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"15": {
+"slot": "BEEDRILL",
+"ticker": "AMKR",
+"base": [
+65,
+80,
+40,
+75,
+45,
+80
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"16": {
+"slot": "PIDGEY",
+"ticker": "META",
+"base": [
+40,
+45,
+40,
+56,
+35,
+35
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"17": {
+"slot": "PIDGEOTTO",
+"ticker": "ANET",
+"base": [
+63,
+60,
+55,
+71,
+50,
+50
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"18": {
+"slot": "PIDGEOT",
+"ticker": "APLD",
+"base": [
+83,
+80,
+75,
+91,
+70,
+70
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"19": {
+"slot": "RATTATA",
+"ticker": "PLTR",
+"base": [
+30,
+56,
+35,
+72,
+25,
+35
+],
+"types": [
+"NEUTRAL"
+]
+},
+"20": {
+"slot": "RATICATE",
+"ticker": "APP",
+"base": [
+55,
+81,
+60,
+97,
+50,
+70
+],
+"types": [
+"NEUTRAL"
+]
+},
+"21": {
+"slot": "SPEAROW",
+"ticker": "NFLX",
+"base": [
+40,
+60,
+30,
+70,
+31,
+31
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"22": {
+"slot": "FEAROW",
+"ticker": "ASML",
+"base": [
+65,
+90,
+65,
+100,
+61,
+61
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"23": {
+"slot": "EKANS",
+"ticker": "AMZN",
+"base": [
+35,
+60,
+44,
+55,
+40,
+54
+],
+"types": [
+"TOXIC"
+]
+},
+"24": {
+"slot": "ARBOK",
+"ticker": "ASTS",
+"base": [
+60,
+85,
+69,
+80,
+65,
+79
+],
+"types": [
+"TOXIC"
+]
+},
+"25": {
+"slot": "PIKACHU",
+"ticker": "AUR",
+"base": [
+35,
+55,
+30,
+90,
+50,
+40
+],
+"types": [
+"VOLT"
+]
+},
+"26": {
+"slot": "RAICHU",
+"ticker": "AVAV",
+"base": [
+60,
+90,
+55,
+100,
+90,
+80
+],
+"types": [
+"VOLT"
+]
+},
+"27": {
+"slot": "SANDSHREW",
+"ticker": "AVGO",
+"base": [
+50,
+75,
+85,
+40,
+20,
+30
+],
+"types": [
+"TERRA"
+]
+},
+"28": {
+"slot": "SANDSLASH",
+"ticker": "AXON",
+"base": [
+75,
+100,
+110,
+65,
+45,
+55
+],
+"types": [
+"TERRA"
+]
+},
+"29": {
+"slot": "NIDORAN_F",
+"ticker": "AXTI",
+"base": [
+55,
+47,
+52,
+41,
+40,
+40
+],
+"types": [
+"TOXIC"
+]
+},
+"30": {
+"slot": "NIDORINA",
+"ticker": "BA",
+"base": [
+70,
+62,
+67,
+56,
+55,
+55
+],
+"types": [
+"TOXIC"
+]
+},
+"31": {
+"slot": "NIDOQUEEN",
+"ticker": "BABA",
+"base": [
+90,
+82,
+87,
+76,
+75,
+85
+],
+"types": [
+"TOXIC",
+"TERRA"
+]
+},
+"32": {
+"slot": "NIDORAN_M",
+"ticker": "BB",
+"base": [
+46,
+57,
+40,
+50,
+40,
+40
+],
+"types": [
+"TOXIC"
+]
+},
+"33": {
+"slot": "NIDORINO",
+"ticker": "BE",
+"base": [
+61,
+72,
+57,
+65,
+55,
+55
+],
+"types": [
+"TOXIC"
+]
+},
+"34": {
+"slot": "NIDOKING",
+"ticker": "BND",
+"base": [
+81,
+92,
+77,
+85,
+85,
+75
+],
+"types": [
+"TOXIC",
+"TERRA"
+]
+},
+"35": {
+"slot": "CLEFAIRY",
+"ticker": "BULL",
+"base": [
+70,
+45,
+48,
+35,
+60,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"36": {
+"slot": "CLEFABLE",
+"ticker": "CBRS",
+"base": [
+95,
+70,
+73,
+60,
+85,
+90
+],
+"types": [
+"NEUTRAL"
+]
+},
+"37": {
+"slot": "VULPIX",
+"ticker": "GOOGL",
+"base": [
+38,
+41,
+40,
+65,
+50,
+65
+],
+"types": [
+"BLAZE"
+]
+},
+"38": {
+"slot": "NINETALES",
+"ticker": "CCL",
+"base": [
+73,
+76,
+75,
+100,
+81,
+100
+],
+"types": [
+"BLAZE"
+]
+},
+"39": {
+"slot": "JIGGLYPUFF",
+"ticker": "COST",
+"base": [
+115,
+45,
+20,
+20,
+45,
+25
+],
+"types": [
+"NEUTRAL"
+]
+},
+"40": {
+"slot": "WIGGLYTUFF",
+"ticker": "CEG",
+"base": [
+140,
+70,
+45,
+45,
+75,
+50
+],
+"types": [
+"NEUTRAL"
+]
+},
+"41": {
+"slot": "ZUBAT",
+"ticker": "MSTR",
+"base": [
+40,
+45,
+35,
+55,
+30,
+40
+],
+"types": [
+"TOXIC",
+"WIND"
+]
+},
+"42": {
+"slot": "GOLBAT",
+"ticker": "CELH",
+"base": [
+75,
+80,
+70,
+90,
+65,
+75
+],
+"types": [
+"TOXIC",
+"WIND"
+]
+},
+"43": {
+"slot": "ODDISH",
+"ticker": "CIEN",
+"base": [
+45,
+50,
+55,
+30,
+75,
+65
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"44": {
+"slot": "GLOOM",
+"ticker": "CLOV",
+"base": [
+60,
+65,
+70,
+40,
+85,
+75
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"45": {
+"slot": "VILEPLUME",
+"ticker": "CLS",
+"base": [
+75,
+80,
+85,
+50,
+100,
+90
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"46": {
+"slot": "PARAS",
+"ticker": "CLSK",
+"base": [
+35,
+70,
+55,
+25,
+45,
+55
+],
+"types": [
+"SWARM",
+"FLORA"
+]
+},
+"47": {
+"slot": "PARASECT",
+"ticker": "COHR",
+"base": [
+60,
+95,
+80,
+30,
+60,
+80
+],
+"types": [
+"SWARM",
+"FLORA"
+]
+},
+"48": {
+"slot": "VENONAT",
+"ticker": "MSFT",
+"base": [
+60,
+55,
+50,
+45,
+40,
+55
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"49": {
+"slot": "VENOMOTH",
+"ticker": "CRCL",
+"base": [
+70,
+65,
+60,
+90,
+90,
+75
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"50": {
+"slot": "DIGLETT",
+"ticker": "CRDO",
+"base": [
+10,
+55,
+25,
+95,
+35,
+45
+],
+"types": [
+"TERRA"
+]
+},
+"51": {
+"slot": "DUGTRIO",
+"ticker": "CRM",
+"base": [
+35,
+80,
+50,
+120,
+50,
+70
+],
+"types": [
+"TERRA"
+]
+},
+"52": {
+"slot": "MEOWTH",
+"ticker": "CRWD",
+"base": [
+40,
+45,
+35,
+90,
+40,
+40
+],
+"types": [
+"NEUTRAL"
+]
+},
+"53": {
+"slot": "PERSIAN",
+"ticker": "CRWV",
+"base": [
+65,
+70,
+60,
+115,
+65,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"54": {
+"slot": "PSYDUCK",
+"ticker": "CSCO",
+"base": [
+50,
+52,
+48,
+55,
+65,
+50
+],
+"types": [
+"TIDE"
+]
+},
+"55": {
+"slot": "GOLDUCK",
+"ticker": "CTSH",
+"base": [
+80,
+82,
+78,
+85,
+95,
+80
+],
+"types": [
+"TIDE"
+]
+},
+"56": {
+"slot": "MANKEY",
+"ticker": "CVNA",
+"base": [
+40,
+80,
+35,
+70,
+35,
+45
+],
+"types": [
+"COMBAT"
+]
+},
+"57": {
+"slot": "PRIMEAPE",
+"ticker": "DDOG",
+"base": [
+65,
+105,
+60,
+95,
+60,
+70
+],
+"types": [
+"COMBAT"
+]
+},
+"58": {
+"slot": "GROWLITHE",
+"ticker": "DELL",
+"base": [
+55,
+70,
+45,
+60,
+70,
+50
+],
+"types": [
+"BLAZE"
+]
+},
+"59": {
+"slot": "ARCANINE",
+"ticker": "DJT",
+"base": [
+90,
+110,
+80,
+95,
+100,
+80
+],
+"types": [
+"BLAZE"
+]
+},
+"60": {
+"slot": "POLIWAG",
+"ticker": "DOCN",
+"base": [
+40,
+50,
+40,
+90,
+40,
+40
+],
+"types": [
+"TIDE"
+]
+},
+"61": {
+"slot": "POLIWHIRL",
+"ticker": "ELF",
+"base": [
+65,
+65,
+65,
+90,
+50,
+50
+],
+"types": [
+"TIDE"
+]
+},
+"62": {
+"slot": "POLIWRATH",
+"ticker": "EWT",
+"base": [
+90,
+85,
+95,
+70,
+70,
+90
+],
+"types": [
+"TIDE",
+"COMBAT"
+]
+},
+"63": {
+"slot": "ABRA",
+"ticker": "EWY",
+"base": [
+25,
+20,
+15,
+90,
+105,
+55
+],
+"types": [
+"PSIONIC"
+]
+},
+"64": {
+"slot": "KADABRA",
+"ticker": "F",
+"base": [
+40,
+35,
+30,
+105,
+120,
+70
+],
+"types": [
+"PSIONIC"
+]
+},
+"65": {
+"slot": "ALAKAZAM",
+"ticker": "FICO",
+"base": [
+55,
+50,
+45,
+120,
+135,
+85
+],
+"types": [
+"PSIONIC"
+]
+},
+"66": {
+"slot": "MACHOP",
+"ticker": "FIG",
+"base": [
+70,
+80,
+50,
+35,
+35,
+35
+],
+"types": [
+"COMBAT"
+]
+},
+"67": {
+"slot": "MACHOKE",
+"ticker": "FISV",
+"base": [
+80,
+100,
+70,
+45,
+50,
+60
+],
+"types": [
+"COMBAT"
+]
+},
+"68": {
+"slot": "MACHAMP",
+"ticker": "FIX",
+"base": [
+90,
+130,
+80,
+55,
+65,
+85
+],
+"types": [
+"COMBAT"
+]
+},
+"69": {
+"slot": "BELLSPROUT",
+"ticker": "FLNC",
+"base": [
+50,
+75,
+35,
+40,
+70,
+30
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"70": {
+"slot": "WEEPINBELL",
+"ticker": "FLY",
+"base": [
+65,
+90,
+50,
+55,
+85,
+45
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"71": {
+"slot": "VICTREEBEL",
+"ticker": "FTNT",
+"base": [
+80,
+105,
+65,
+70,
+100,
+60
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"72": {
+"slot": "TENTACOOL",
+"ticker": "FUTU",
+"base": [
+40,
+40,
+35,
+70,
+50,
+100
+],
+"types": [
+"TIDE",
+"TOXIC"
+]
+},
+"73": {
+"slot": "TENTACRUEL",
+"ticker": "GE",
+"base": [
+80,
+70,
+65,
+100,
+80,
+120
+],
+"types": [
+"TIDE",
+"TOXIC"
+]
+},
+"74": {
+"slot": "GEODUDE",
+"ticker": "GEV",
+"base": [
+40,
+80,
+100,
+20,
+30,
+30
+],
+"types": [
+"STONE",
+"TERRA"
+]
+},
+"75": {
+"slot": "GRAVELER",
+"ticker": "GLD",
+"base": [
+55,
+95,
+115,
+35,
+45,
+45
+],
+"types": [
+"STONE",
+"TERRA"
+]
+},
+"76": {
+"slot": "GOLEM",
+"ticker": "GLW",
+"base": [
+80,
+110,
+130,
+45,
+55,
+65
+],
+"types": [
+"STONE",
+"TERRA"
+]
+},
+"77": {
+"slot": "PONYTA",
+"ticker": "GLXY",
+"base": [
+50,
+85,
+55,
+90,
+65,
+65
+],
+"types": [
+"BLAZE"
+]
+},
+"78": {
+"slot": "RAPIDASH",
+"ticker": "GME",
+"base": [
+65,
+100,
+70,
+105,
+80,
+80
+],
+"types": [
+"BLAZE"
+]
+},
+"79": {
+"slot": "SLOWPOKE",
+"ticker": "HII",
+"base": [
+90,
+65,
+65,
+15,
+40,
+40
+],
+"types": [
+"TIDE",
+"PSIONIC"
+]
+},
+"80": {
+"slot": "SLOWBRO",
+"ticker": "HIMS",
+"base": [
+95,
+75,
+110,
+30,
+100,
+80
+],
+"types": [
+"TIDE",
+"PSIONIC"
+]
+},
+"81": {
+"slot": "MAGNEMITE",
+"ticker": "HPE",
+"base": [
+25,
+35,
+70,
+45,
+95,
+55
+],
+"types": [
+"VOLT",
+"ALLOY"
+]
+},
+"82": {
+"slot": "MAGNETON",
+"ticker": "HWM",
+"base": [
+50,
+60,
+95,
+70,
+120,
+70
+],
+"types": [
+"VOLT",
+"ALLOY"
+]
+},
+"83": {
+"slot": "FARFETCHD",
+"ticker": "IBM",
+"base": [
+52,
+65,
+55,
+60,
+58,
+62
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"84": {
+"slot": "DODUO",
+"ticker": "IBRX",
+"base": [
+35,
+85,
+45,
+75,
+35,
+35
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"85": {
+"slot": "DODRIO",
+"ticker": "INDA",
+"base": [
+60,
+110,
+70,
+100,
+60,
+60
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"86": {
+"slot": "SEEL",
+"ticker": "INFQ",
+"base": [
+65,
+45,
+55,
+45,
+45,
+70
+],
+"types": [
+"TIDE"
+]
+},
+"87": {
+"slot": "DEWGONG",
+"ticker": "INOD",
+"base": [
+90,
+70,
+80,
+70,
+70,
+95
+],
+"types": [
+"TIDE",
+"FROST"
+]
+},
+"88": {
+"slot": "GRIMER",
+"ticker": "INTC",
+"base": [
+80,
+80,
+50,
+25,
+40,
+50
+],
+"types": [
+"TOXIC"
+]
+},
+"89": {
+"slot": "MUK",
+"ticker": "INTU",
+"base": [
+105,
+105,
+75,
+50,
+65,
+100
+],
+"types": [
+"TOXIC"
+]
+},
+"90": {
+"slot": "SHELLDER",
+"ticker": "IONQ",
+"base": [
+30,
+65,
+100,
+40,
+45,
+25
+],
+"types": [
+"TIDE"
+]
+},
+"91": {
+"slot": "CLOYSTER",
+"ticker": "IREN",
+"base": [
+50,
+95,
+180,
+70,
+85,
+45
+],
+"types": [
+"TIDE",
+"FROST"
+]
+},
+"92": {
+"slot": "GASTLY",
+"ticker": "JBL",
+"base": [
+30,
+35,
+30,
+80,
+100,
+35
+],
+"types": [
+"SPECTRE",
+"TOXIC"
+]
+},
+"93": {
+"slot": "HAUNTER",
+"ticker": "JNJ",
+"base": [
+45,
+50,
+45,
+95,
+115,
+55
+],
+"types": [
+"SPECTRE",
+"TOXIC"
+]
+},
+"94": {
+"slot": "GENGAR",
+"ticker": "JOBY",
+"base": [
+60,
+65,
+60,
+110,
+130,
+75
+],
+"types": [
+"SPECTRE",
+"TOXIC"
+]
+},
+"95": {
+"slot": "ONIX",
+"ticker": "KLAC",
+"base": [
+35,
+45,
+160,
+70,
+30,
+45
+],
+"types": [
+"STONE",
+"TERRA"
+]
+},
+"96": {
+"slot": "DROWZEE",
+"ticker": "KSS",
+"base": [
+60,
+48,
+45,
+42,
+43,
+90
+],
+"types": [
+"PSIONIC"
+]
+},
+"97": {
+"slot": "HYPNO",
+"ticker": "KTOS",
+"base": [
+85,
+73,
+70,
+67,
+73,
+115
+],
+"types": [
+"PSIONIC"
+]
+},
+"98": {
+"slot": "KRABBY",
+"ticker": "LHX",
+"base": [
+30,
+105,
+90,
+50,
+25,
+25
+],
+"types": [
+"TIDE"
+]
+},
+"99": {
+"slot": "KINGLER",
+"ticker": "LITE",
+"base": [
+55,
+130,
+115,
+75,
+50,
+50
+],
+"types": [
+"TIDE"
+]
+},
+"100": {
+"slot": "VOLTORB",
+"ticker": "LLY",
+"base": [
+40,
+30,
+50,
+100,
+55,
+55
+],
+"types": [
+"VOLT"
+]
+},
+"101": {
+"slot": "ELECTRODE",
+"ticker": "LMT",
+"base": [
+60,
+50,
+70,
+140,
+80,
+80
+],
+"types": [
+"VOLT"
+]
+},
+"102": {
+"slot": "EXEGGCUTE",
+"ticker": "LRCX",
+"base": [
+60,
+40,
+80,
+40,
+60,
+45
+],
+"types": [
+"FLORA",
+"PSIONIC"
+]
+},
+"103": {
+"slot": "EXEGGUTOR",
+"ticker": "LULU",
+"base": [
+95,
+95,
+85,
+55,
+125,
+65
+],
+"types": [
+"FLORA",
+"PSIONIC"
+]
+},
+"104": {
+"slot": "CUBONE",
+"ticker": "LUNR",
+"base": [
+50,
+50,
+95,
+35,
+40,
+50
+],
+"types": [
+"TERRA"
+]
+},
+"105": {
+"slot": "MAROWAK",
+"ticker": "MDB",
+"base": [
+60,
+80,
+110,
+45,
+50,
+80
+],
+"types": [
+"TERRA"
+]
+},
+"106": {
+"slot": "HITMONLEE",
+"ticker": "MOD",
+"base": [
+50,
+120,
+53,
+87,
+35,
+110
+],
+"types": [
+"COMBAT"
+]
+},
+"107": {
+"slot": "HITMONCHAN",
+"ticker": "RDDT",
+"base": [
+50,
+105,
+79,
+76,
+35,
+110
+],
+"types": [
+"TIDE"
+]
+},
+"108": {
+"slot": "LICKITUNG",
+"ticker": "RDW",
+"base": [
+90,
+55,
+75,
+30,
+60,
+75
+],
+"types": [
+"TIDE"
+]
+},
+"109": {
+"slot": "KOFFING",
+"ticker": "RGTI",
+"base": [
+40,
+65,
+95,
+35,
+60,
+45
+],
+"types": [
+"TIDE"
+]
+},
+"110": {
+"slot": "WEEZING",
+"ticker": "FARTCOIN",
+"base": [
+65,
+90,
+120,
+60,
+85,
+70
+],
+"types": [
+"TOXIC"
+]
+},
+"111": {
+"slot": "RHYHORN",
+"ticker": "RIVN",
+"base": [
+80,
+85,
+95,
+25,
+30,
+30
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"112": {
+"slot": "RHYDON",
+"ticker": "RKLB",
+"base": [
+105,
+130,
+120,
+40,
+45,
+45
+],
+"types": [
+"ALLOY",
+"PSIONIC"
+]
+},
+"113": {
+"slot": "CHANSEY",
+"ticker": "RUN",
+"base": [
+250,
+5,
+5,
+50,
+35,
+105
+],
+"types": [
+"TOXIC",
+"SWARM"
+]
+},
+"114": {
+"slot": "TANGELA",
+"ticker": "MPWR",
+"base": [
+65,
+55,
+115,
+60,
+100,
+40
+],
+"types": [
+"FLORA"
+]
+},
+"115": {
+"slot": "KANGASKHAN",
+"ticker": "SATS",
+"base": [
+105,
+95,
+80,
+90,
+40,
+80
+],
+"types": [
+"TOXIC",
+"COMBAT"
+]
+},
+"116": {
+"slot": "HORSEA",
+"ticker": "SCHD",
+"base": [
+30,
+40,
+70,
+60,
+70,
+25
+],
+"types": [
+"TOXIC",
+"COMBAT"
+]
+},
+"117": {
+"slot": "SEADRA",
+"ticker": "SGOV",
+"base": [
+55,
+65,
+95,
+85,
+95,
+45
+],
+"types": [
+"FLORA"
+]
+},
+"118": {
+"slot": "GOLDEEN",
+"ticker": "SHOP",
+"base": [
+45,
+67,
+60,
+63,
+35,
+50
+],
+"types": [
+"TIDE"
+]
+},
+"119": {
+"slot": "SEAKING",
+"ticker": "SHY",
+"base": [
+80,
+92,
+65,
+68,
+65,
+80
+],
+"types": [
+"FLORA",
+"FROST"
+]
+},
+"120": {
+"slot": "STARYU",
+"ticker": "SIMO",
+"base": [
+30,
+45,
+55,
+85,
+70,
+55
+],
+"types": [
+"FLORA",
+"FROST"
+]
+},
+"121": {
+"slot": "STARMIE",
+"ticker": "SKHY",
+"base": [
+60,
+75,
+85,
+115,
+100,
+85
+],
+"types": [
+"FLORA"
+]
+},
+"122": {
+"slot": "MR_MIME",
+"ticker": "SLS",
+"base": [
+40,
+45,
+65,
+90,
+100,
+120
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"123": {
+"slot": "SCYTHER",
+"ticker": "MRNA",
+"base": [
+70,
+110,
+80,
+105,
+55,
+80
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"124": {
+"slot": "JYNX",
+"ticker": "SLV",
+"base": [
+65,
+50,
+35,
+95,
+115,
+95
+],
+"types": [
+"PSIONIC",
+"COMBAT"
+]
+},
+"125": {
+"slot": "ELECTABUZZ",
+"ticker": "SMCI",
+"base": [
+65,
+83,
+57,
+105,
+95,
+85
+],
+"types": [
+"FLORA"
+]
+},
+"126": {
+"slot": "MAGMAR",
+"ticker": "SPX",
+"base": [
+65,
+95,
+57,
+93,
+100,
+85
+],
+"types": [
+"BLAZE"
+]
+},
+"127": {
+"slot": "PINSIR",
+"ticker": "SMH",
+"base": [
+65,
+125,
+100,
+85,
+55,
+70
+],
+"types": [
+"STONE"
+]
+},
+"128": {
+"slot": "TAUROS",
+"ticker": "SMR",
+"base": [
+75,
+100,
+95,
+110,
+40,
+70
+],
+"types": [
+"TERRA"
+]
+},
+"129": {
+"slot": "MAGIKARP",
+"ticker": "MRVL",
+"base": [
+20,
+10,
+55,
+80,
+15,
+20
+],
+"types": [
+"TIDE"
+]
+},
+"130": {
+"slot": "GYARADOS",
+"ticker": "MTSI",
+"base": [
+95,
+125,
+79,
+81,
+60,
+100
+],
+"types": [
+"TIDE",
+"WIND"
+]
+},
+"131": {
+"slot": "LAPRAS",
+"ticker": "MU",
+"base": [
+130,
+85,
+80,
+60,
+85,
+95
+],
+"types": [
+"TIDE",
+"FROST"
+]
+},
+"132": {
+"slot": "DITTO",
+"ticker": "USELESS",
+"base": [
+48,
+48,
+48,
+48,
+48,
+48
+],
+"types": [
+"NEUTRAL"
+]
+},
+"133": {
+"slot": "EEVEE",
+"ticker": "DOGE",
+"base": [
+55,
+55,
+50,
+55,
+45,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"134": {
+"slot": "VAPOREON",
+"ticker": "SNAP",
+"base": [
+130,
+65,
+60,
+65,
+110,
+95
+],
+"types": [
+"TIDE"
+]
+},
+"135": {
+"slot": "JOLTEON",
+"ticker": "SNDK",
+"base": [
+65,
+65,
+60,
+130,
+110,
+95
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"136": {
+"slot": "FLAREON",
+"ticker": "SNOW",
+"base": [
+65,
+130,
+60,
+65,
+95,
+110
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"137": {
+"slot": "PORYGON",
+"ticker": "MEME",
+"base": [
+65,
+60,
+70,
+40,
+85,
+75
+],
+"types": [
+"NEUTRAL"
+]
+},
+"138": {
+"slot": "OMANYTE",
+"ticker": "SOFI",
+"base": [
+35,
+40,
+100,
+35,
+90,
+55
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"139": {
+"slot": "OMASTAR",
+"ticker": "SOUN",
+"base": [
+70,
+60,
+125,
+55,
+115,
+70
+],
+"types": [
+"TIDE",
+"SPECTRE"
+]
+},
+"140": {
+"slot": "KABUTO",
+"ticker": "ORDI",
+"base": [
+30,
+80,
+90,
+55,
+55,
+45
+],
+"types": [
+"STONE",
+"TIDE"
+]
+},
+"141": {
+"slot": "KABUTOPS",
+"ticker": "SOXX",
+"base": [
+60,
+115,
+105,
+80,
+65,
+70
+],
+"types": [
+"ALLOY"
+]
+},
+"142": {
+"slot": "AERODACTYL",
+"ticker": "SPCX",
+"base": [
+80,
+105,
+65,
+130,
+60,
+75
+],
+"types": [
+"ALLOY"
+]
+},
+"143": {
+"slot": "SNORLAX",
+"ticker": "SPMO",
+"base": [
+160,
+110,
+65,
+30,
+65,
+110
+],
+"types": [
+"VOLT"
+]
+},
+"144": {
+"slot": "ARTICUNO",
+"ticker": "SPY",
+"base": [
+90,
+85,
+100,
+85,
+95,
+125
+],
+"types": [
+"VOLT"
+]
+},
+"145": {
+"slot": "ZAPDOS",
+"ticker": "TE",
+"base": [
+90,
+90,
+85,
+100,
+125,
+90
+],
+"types": [
+"FLORA",
+"COMBAT"
+]
+},
+"146": {
+"slot": "MOLTRES",
+"ticker": "TEAM",
+"base": [
+90,
+100,
+90,
+90,
+125,
+85
+],
+"types": [
+"BLAZE",
+"WIND"
+]
+},
+"147": {
+"slot": "DRATINI",
+"ticker": "MXL",
+"base": [
+41,
+64,
+45,
+50,
+50,
+50
+],
+"types": [
+"WYRM"
+]
+},
+"148": {
+"slot": "DRAGONAIR",
+"ticker": "TEM",
+"base": [
+61,
+84,
+65,
+70,
+70,
+70
+],
+"types": [
+"BLAZE",
+"WIND"
+]
+},
+"149": {
+"slot": "DRAGONITE",
+"ticker": "NAVN",
+"base": [
+91,
+134,
+95,
+80,
+100,
+100
+],
+"types": [
+"WYRM",
+"WIND"
+]
+},
+"150": {
+"slot": "MEWTWO",
+"ticker": "TER",
+"base": [
+106,
+110,
+90,
+130,
+154,
+90
+],
+"types": [
+"FLORA"
+]
+},
+"151": {
+"slot": "MEW",
+"ticker": "TSEM",
+"base": [
+100,
+100,
+100,
+100,
+100,
+100
+],
+"types": [
+"STONE",
+"TIDE"
+]
+},
+"152": {
+"slot": "CHIKORITA",
+"ticker": "TSM",
+"base": [
+45,
+49,
+65,
+45,
+49,
+65
+],
+"types": [
+"VOLT",
+"NEUTRAL"
+]
+},
+"153": {
+"slot": "BAYLEEF",
+"ticker": "TTD",
+"base": [
+60,
+62,
+80,
+60,
+63,
+80
+],
+"types": [
+"WYRM"
+]
+},
+"154": {
+"slot": "MEGANIUM",
+"ticker": "NBIS",
+"base": [
+80,
+82,
+100,
+80,
+83,
+100
+],
+"types": [
+"FLORA"
+]
+},
+"155": {
+"slot": "CYNDAQUIL",
+"ticker": "TTWO",
+"base": [
+39,
+52,
+43,
+65,
+60,
+50
+],
+"types": [
+"WYRM"
+]
+},
+"156": {
+"slot": "QUILAVA",
+"ticker": "UMC",
+"base": [
+58,
+64,
+58,
+80,
+80,
+65
+],
+"types": [
+"FROST"
+]
+},
+"157": {
+"slot": "TYPHLOSION",
+"ticker": "UNH",
+"base": [
+78,
+84,
+78,
+100,
+109,
+85
+],
+"types": [
+"WIND",
+"WYRM"
+]
+},
+"158": {
+"slot": "TOTODILE",
+"ticker": "UPS",
+"base": [
+50,
+65,
+64,
+43,
+44,
+48
+],
+"types": [
+"BLAZE",
+"SHADOW"
+]
+},
+"159": {
+"slot": "CROCONAW",
+"ticker": "USAR",
+"base": [
+65,
+80,
+80,
+58,
+59,
+63
+],
+"types": [
+"TIDE",
+"NEUTRAL"
+]
+},
+"160": {
+"slot": "FERALIGATR",
+"ticker": "USO",
+"base": [
+85,
+105,
+100,
+78,
+79,
+83
+],
+"types": [
+"NEUTRAL"
+]
+},
+"161": {
+"slot": "SENTRET",
+"ticker": "VICR",
+"base": [
+35,
+46,
+34,
+20,
+35,
+45
+],
+"types": [
+"COMBAT",
+"FROST"
+]
+},
+"162": {
+"slot": "FURRET",
+"ticker": "VRT",
+"base": [
+85,
+76,
+64,
+90,
+45,
+55
+],
+"types": [
+"SWARM",
+"NEUTRAL"
+]
+},
+"163": {
+"slot": "HOOTHOOT",
+"ticker": "VSAT",
+"base": [
+60,
+30,
+30,
+50,
+36,
+56
+],
+"types": [
+"SWARM",
+"NEUTRAL"
+]
+},
+"164": {
+"slot": "NOCTOWL",
+"ticker": "VST",
+"base": [
+100,
+50,
+50,
+70,
+76,
+96
+],
+"types": [
+"STONE"
+]
+},
+"165": {
+"slot": "LEDYBA",
+"ticker": "VTI",
+"base": [
+40,
+20,
+30,
+55,
+40,
+80
+],
+"types": [
+"TIDE"
+]
+},
+"166": {
+"slot": "LEDIAN",
+"ticker": "NET",
+"base": [
+55,
+35,
+50,
+85,
+55,
+110
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"167": {
+"slot": "SPINARAK",
+"ticker": "WDAY",
+"base": [
+40,
+60,
+40,
+30,
+40,
+40
+],
+"types": [
+"TERRA"
+]
+},
+"168": {
+"slot": "ARIADOS",
+"ticker": "NNE",
+"base": [
+70,
+90,
+70,
+40,
+60,
+60
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"169": {
+"slot": "CROBAT",
+"ticker": "WDC",
+"base": [
+85,
+90,
+80,
+130,
+70,
+80
+],
+"types": [
+"TERRA"
+]
+},
+"170": {
+"slot": "CHINCHOU",
+"ticker": "NOW",
+"base": [
+75,
+38,
+38,
+67,
+56,
+56
+],
+"types": [
+"TIDE",
+"VOLT"
+]
+},
+"171": {
+"slot": "LANTURN",
+"ticker": "NU",
+"base": [
+125,
+58,
+58,
+67,
+76,
+76
+],
+"types": [
+"TIDE",
+"VOLT"
+]
+},
+"172": {
+"slot": "PICHU",
+"ticker": "WULF",
+"base": [
+20,
+40,
+15,
+60,
+35,
+35
+],
+"types": [
+"TIDE",
+"SWARM"
+]
+},
+"173": {
+"slot": "CLEFFA",
+"ticker": "WYFI",
+"base": [
+50,
+25,
+28,
+15,
+45,
+55
+],
+"types": [
+"FLORA",
+"NEUTRAL"
+]
+},
+"174": {
+"slot": "IGGLYBUFF",
+"ticker": "WEN",
+"base": [
+90,
+30,
+15,
+15,
+40,
+20
+],
+"types": [
+"NEUTRAL"
+]
+},
+"175": {
+"slot": "TOGEPI",
+"ticker": "XLK",
+"base": [
+35,
+20,
+65,
+20,
+40,
+65
+],
+"types": [
+"FLORA",
+"NEUTRAL"
+]
+},
+"176": {
+"slot": "TOGETIC",
+"ticker": "XNDU",
+"base": [
+55,
+40,
+85,
+40,
+80,
+105
+],
+"types": [
+"TOXIC",
+"BLAZE"
+]
+},
+"177": {
+"slot": "NATU",
+"ticker": "XOM",
+"base": [
+40,
+50,
+45,
+70,
+70,
+45
+],
+"types": [
+"SPECTRE",
+"TERRA"
+]
+},
+"178": {
+"slot": "XATU",
+"ticker": "ZM",
+"base": [
+65,
+75,
+70,
+95,
+95,
+70
+],
+"types": [
+"BLAZE",
+"WYRM"
+]
+},
+"179": {
+"slot": "MAREEP",
+"ticker": "ZS",
+"base": [
+55,
+40,
+40,
+35,
+65,
+45
+],
+"types": [
+"SPECTRE",
+"FLORA"
+]
+},
+"180": {
+"slot": "FLAAFFY",
+"ticker": "PEPE",
+"base": [
+70,
+55,
+55,
+45,
+80,
+60
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"181": {
+"slot": "AMPHAROS",
+"ticker": "NVTS",
+"base": [
+90,
+75,
+75,
+55,
+115,
+90
+],
+"types": [
+"VOLT"
+]
+},
+"182": {
+"slot": "BELLOSSOM",
+"ticker": "FLOKI",
+"base": [
+75,
+80,
+85,
+50,
+90,
+100
+],
+"types": [
+"STONE"
+]
+},
+"183": {
+"slot": "MARILL",
+"ticker": "OKLO",
+"base": [
+70,
+20,
+50,
+40,
+20,
+50
+],
+"types": [
+"TIDE",
+"NEUTRAL"
+]
+},
+"184": {
+"slot": "AZUMARILL",
+"ticker": "NEIRO",
+"base": [
+100,
+50,
+80,
+50,
+50,
+80
+],
+"types": [
+"NEUTRAL"
+]
+},
+"185": {
+"slot": "SUDOWOODO",
+"ticker": "MOG",
+"base": [
+70,
+100,
+115,
+30,
+30,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"186": {
+"slot": "POLITOED",
+"ticker": "BRETT",
+"base": [
+90,
+75,
+75,
+70,
+90,
+100
+],
+"types": [
+"TIDE"
+]
+},
+"187": {
+"slot": "HOPPIP",
+"ticker": "BOME",
+"base": [
+35,
+35,
+40,
+50,
+35,
+55
+],
+"types": [
+"NEUTRAL",
+"PSIONIC"
+]
+},
+"188": {
+"slot": "SKIPLOOM",
+"ticker": "PONKE",
+"base": [
+55,
+45,
+50,
+80,
+45,
+65
+],
+"types": [
+"COMBAT"
+]
+},
+"189": {
+"slot": "JUMPLUFF",
+"ticker": "MICHI",
+"base": [
+75,
+55,
+70,
+110,
+55,
+85
+],
+"types": [
+"PSIONIC"
+]
+},
+"190": {
+"slot": "AIPOM",
+"ticker": "GOAT",
+"base": [
+55,
+70,
+55,
+85,
+40,
+55
+],
+"types": [
+"FLORA"
+]
+},
+"191": {
+"slot": "SUNKERN",
+"ticker": "PNUT",
+"base": [
+30,
+30,
+30,
+30,
+30,
+30
+],
+"types": [
+"VOLT"
+]
+},
+"192": {
+"slot": "SUNFLORA",
+"ticker": "CHILLGUY",
+"base": [
+75,
+75,
+55,
+30,
+105,
+85
+],
+"types": [
+"NEUTRAL",
+"COMBAT"
+]
+},
+"193": {
+"slot": "YANMA",
+"ticker": "ON",
+"base": [
+65,
+65,
+45,
+95,
+75,
+45
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"194": {
+"slot": "WOOPER",
+"ticker": "FWOG",
+"base": [
+55,
+45,
+45,
+15,
+25,
+25
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"195": {
+"slot": "QUAGSIRE",
+"ticker": "MOODENG",
+"base": [
+95,
+85,
+85,
+35,
+65,
+65
+],
+"types": [
+"TERRA"
+]
+},
+"196": {
+"slot": "ESPEON",
+"ticker": "PENGU",
+"base": [
+65,
+65,
+60,
+110,
+130,
+95
+],
+"types": [
+"TIDE"
+]
+},
+"197": {
+"slot": "UMBREON",
+"ticker": "HARAMBE",
+"base": [
+95,
+65,
+110,
+65,
+60,
+130
+],
+"types": [
+"COMBAT",
+"SHADOW"
+]
+},
+"198": {
+"slot": "MURKROW",
+"ticker": "DEGEN",
+"base": [
+60,
+85,
+42,
+91,
+85,
+42
+],
+"types": [
+"SHADOW",
+"COMBAT"
+]
+},
+"199": {
+"slot": "SLOWKING",
+"ticker": "SNEK",
+"base": [
+95,
+75,
+80,
+30,
+100,
+110
+],
+"types": [
+"SHADOW",
+"COMBAT"
+]
+},
+"200": {
+"slot": "MISDREAVUS",
+"ticker": "TOSHI",
+"base": [
+60,
+60,
+60,
+85,
+85,
+85
+],
+"types": [
+"PSIONIC"
+]
+},
+"201": {
+"slot": "UNOWN",
+"ticker": null,
+"base": [
+48,
+72,
+48,
+48,
+72,
+48
+],
+"types": [
+"PSIONIC"
+]
+},
+"202": {
+"slot": "WOBBUFFET",
+"ticker": "ACT",
+"base": [
+190,
+33,
+58,
+33,
+33,
+58
+],
+"types": [
+"PSIONIC"
+]
+},
+"203": {
+"slot": "GIRAFARIG",
+"ticker": "LADYS",
+"base": [
+70,
+80,
+65,
+85,
+90,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"204": {
+"slot": "PINECO",
+"ticker": "RATS",
+"base": [
+50,
+65,
+90,
+15,
+35,
+35
+],
+"types": [
+"NEUTRAL",
+"TERRA"
+]
+},
+"205": {
+"slot": "FORRETRESS",
+"ticker": "BOBO",
+"base": [
+75,
+90,
+140,
+40,
+60,
+60
+],
+"types": [
+"NEUTRAL",
+"COMBAT"
+]
+},
+"206": {
+"slot": "DUNSPARCE",
+"ticker": "APU",
+"base": [
+100,
+70,
+70,
+45,
+65,
+65
+],
+"types": [
+"TIDE"
+]
+},
+"207": {
+"slot": "GLIGAR",
+"ticker": "KEYCAT",
+"base": [
+65,
+75,
+105,
+85,
+35,
+65
+],
+"types": [
+"BLAZE"
+]
+},
+"208": {
+"slot": "STEELIX",
+"ticker": "HOSICO",
+"base": [
+75,
+85,
+200,
+30,
+55,
+65
+],
+"types": [
+"BLAZE"
+]
+},
+"209": {
+"slot": "SNUBBULL",
+"ticker": "MYRO",
+"base": [
+60,
+80,
+50,
+30,
+40,
+40
+],
+"types": [
+"NEUTRAL"
+]
+},
+"210": {
+"slot": "GRANBULL",
+"ticker": "SAMO",
+"base": [
+90,
+120,
+75,
+45,
+60,
+60
+],
+"types": [
+"NEUTRAL"
+]
+},
+"211": {
+"slot": "QWILFISH",
+"ticker": "GOKU",
+"base": [
+65,
+95,
+75,
+85,
+55,
+55
+],
+"types": [
+"COMBAT"
+]
+},
+"212": {
+"slot": "SCIZOR",
+"ticker": "KIBA",
+"base": [
+70,
+130,
+100,
+65,
+55,
+80
+],
+"types": [
+"NEUTRAL"
+]
+},
+"213": {
+"slot": "SHUCKLE",
+"ticker": "CROC",
+"base": [
+20,
+10,
+230,
+5,
+10,
+230
+],
+"types": [
+"TERRA",
+"SHADOW"
+]
+},
+"214": {
+"slot": "HERACROSS",
+"ticker": "QUACK",
+"base": [
+80,
+125,
+75,
+85,
+40,
+95
+],
+"types": [
+"TIDE",
+"WIND"
+]
+},
+"215": {
+"slot": "SNEASEL",
+"ticker": "ONTO",
+"base": [
+55,
+95,
+55,
+115,
+35,
+75
+],
+"types": [
+"SHADOW",
+"FROST"
+]
+},
+"216": {
+"slot": "TEDDIURSA",
+"ticker": "WIF",
+"base": [
+60,
+80,
+50,
+40,
+50,
+50
+],
+"types": [
+"NEUTRAL"
+]
+},
+"217": {
+"slot": "URSARING",
+"ticker": null,
+"base": [
+90,
+130,
+75,
+55,
+75,
+75
+],
+"types": [
+"NEUTRAL"
+]
+},
+"218": {
+"slot": "SLUGMA",
+"ticker": null,
+"base": [
+40,
+40,
+40,
+20,
+70,
+40
+],
+"types": [
+"BLAZE"
+]
+},
+"219": {
+"slot": "MAGCARGO",
+"ticker": "PUMP",
+"base": [
+50,
+50,
+120,
+30,
+80,
+80
+],
+"types": [
+"BLAZE",
+"STONE"
+]
+},
+"220": {
+"slot": "SWINUB",
+"ticker": null,
+"base": [
+50,
+50,
+40,
+50,
+30,
+30
+],
+"types": [
+"FROST",
+"TERRA"
+]
+},
+"221": {
+"slot": "PILOSWINE",
+"ticker": null,
+"base": [
+100,
+100,
+80,
+50,
+60,
+60
+],
+"types": [
+"FROST",
+"TERRA"
+]
+},
+"222": {
+"slot": "CORSOLA",
+"ticker": null,
+"base": [
+55,
+55,
+85,
+35,
+65,
+85
+],
+"types": [
+"TIDE",
+"STONE"
+]
+},
+"223": {
+"slot": "REMORAID",
+"ticker": "ORCL",
+"base": [
+35,
+65,
+35,
+65,
+65,
+35
+],
+"types": [
+"TIDE"
+]
+},
+"224": {
+"slot": "OCTILLERY",
+"ticker": null,
+"base": [
+75,
+105,
+75,
+45,
+105,
+75
+],
+"types": [
+"TIDE"
+]
+},
+"225": {
+"slot": "DELIBIRD",
+"ticker": null,
+"base": [
+45,
+55,
+45,
+75,
+65,
+45
+],
+"types": [
+"FROST",
+"WIND"
+]
+},
+"226": {
+"slot": "MANTINE",
+"ticker": null,
+"base": [
+65,
+40,
+70,
+70,
+80,
+140
+],
+"types": [
+"TIDE",
+"WIND"
+]
+},
+"227": {
+"slot": "SKARMORY",
+"ticker": null,
+"base": [
+65,
+80,
+140,
+70,
+40,
+70
+],
+"types": [
+"ALLOY",
+"WIND"
+]
+},
+"228": {
+"slot": "HOUNDOUR",
+"ticker": "ELON",
+"base": [
+45,
+60,
+30,
+65,
+80,
+50
+],
+"types": [
+"SHADOW",
+"BLAZE"
+]
+},
+"229": {
+"slot": "HOUNDOOM",
+"ticker": "BONK",
+"base": [
+75,
+90,
+50,
+95,
+110,
+80
+],
+"types": [
+"SHADOW",
+"BLAZE"
+]
+},
+"230": {
+"slot": "KINGDRA",
+"ticker": null,
+"base": [
+75,
+95,
+95,
+85,
+95,
+95
+],
+"types": [
+"TIDE",
+"WYRM"
+]
+},
+"231": {
+"slot": "PHANPY",
+"ticker": null,
+"base": [
+90,
+60,
+60,
+40,
+40,
+40
+],
+"types": [
+"TERRA"
+]
+},
+"232": {
+"slot": "DONPHAN",
+"ticker": null,
+"base": [
+90,
+120,
+120,
+50,
+60,
+60
+],
+"types": [
+"TERRA"
+]
+},
+"233": {
+"slot": "PORYGON2",
+"ticker": null,
+"base": [
+85,
+80,
+90,
+60,
+105,
+95
+],
+"types": [
+"NEUTRAL"
+]
+},
+"234": {
+"slot": "STANTLER",
+"ticker": null,
+"base": [
+73,
+95,
+62,
+85,
+85,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"235": {
+"slot": "SMEARGLE",
+"ticker": "WOJAK",
+"base": [
+55,
+20,
+35,
+75,
+20,
+45
+],
+"types": [
+"NEUTRAL"
+]
+},
+"236": {
+"slot": "TYROGUE",
+"ticker": null,
+"base": [
+35,
+35,
+35,
+35,
+35,
+35
+],
+"types": [
+"COMBAT"
+]
+},
+"237": {
+"slot": "HITMONTOP",
+"ticker": null,
+"base": [
+50,
+95,
+95,
+70,
+35,
+110
+],
+"types": [
+"COMBAT"
+]
+},
+"238": {
+"slot": "SMOOCHUM",
+"ticker": null,
+"base": [
+45,
+30,
+15,
+65,
+85,
+65
+],
+"types": [
+"FROST",
+"PSIONIC"
+]
+},
+"239": {
+"slot": "ELEKID",
+"ticker": null,
+"base": [
+45,
+63,
+37,
+95,
+65,
+55
+],
+"types": [
+"VOLT"
+]
+},
+"240": {
+"slot": "MAGBY",
+"ticker": null,
+"base": [
+45,
+75,
+37,
+83,
+70,
+55
+],
+"types": [
+"BLAZE"
+]
+},
+"241": {
+"slot": "MILTANK",
+"ticker": null,
+"base": [
+95,
+80,
+105,
+100,
+40,
+70
+],
+"types": [
+"NEUTRAL"
+]
+},
+"242": {
+"slot": "BLISSEY",
+"ticker": null,
+"base": [
+255,
+10,
+10,
+55,
+75,
+135
+],
+"types": [
+"NEUTRAL"
+]
+},
+"243": {
+"slot": "RAIKOU",
+"ticker": null,
+"base": [
+90,
+85,
+75,
+115,
+115,
+100
+],
+"types": [
+"VOLT"
+]
+},
+"244": {
+"slot": "ENTEI",
+"ticker": null,
+"base": [
+115,
+115,
+85,
+100,
+90,
+75
+],
+"types": [
+"BLAZE"
+]
+},
+"245": {
+"slot": "SUICUNE",
+"ticker": null,
+"base": [
+100,
+75,
+115,
+85,
+90,
+115
+],
+"types": [
+"TIDE"
+]
+},
+"246": {
+"slot": "LARVITAR",
+"ticker": "OUST",
+"base": [
+50,
+64,
+50,
+41,
+45,
+50
+],
+"types": [
+"STONE",
+"TERRA"
+]
+},
+"247": {
+"slot": "PUPITAR",
+"ticker": null,
+"base": [
+70,
+84,
+70,
+51,
+65,
+70
+],
+"types": [
+"STONE",
+"TERRA"
+]
+},
+"248": {
+"slot": "TYRANITAR",
+"ticker": null,
+"base": [
+100,
+134,
+110,
+61,
+95,
+100
+],
+"types": [
+"STONE",
+"SHADOW"
+]
+},
+"249": {
+"slot": "LUGIA",
+"ticker": null,
+"base": [
+106,
+90,
+130,
+110,
+90,
+154
+],
+"types": [
+"PSIONIC",
+"WIND"
+]
+},
+"250": {
+"slot": "HO_OH",
+"ticker": null,
+"base": [
+106,
+130,
+90,
+90,
+110,
+154
+],
+"types": [
+"BLAZE",
+"WIND"
+]
+},
+"251": {
+"slot": "CELEBI",
+"ticker": null,
+"base": [
+100,
+100,
+100,
+100,
+100,
+100
+],
+"types": [
+"PSIONIC",
+"FLORA"
+]
+},
+"277": {
+"slot": "TREECKO",
+"ticker": null,
+"base": [
+40,
+45,
+35,
+70,
+65,
+55
+],
+"types": [
+"FLORA"
+]
+},
+"278": {
+"slot": "GROVYLE",
+"ticker": "P",
+"base": [
+50,
+65,
+45,
+95,
+85,
+65
+],
+"types": [
+"FLORA"
+]
+},
+"279": {
+"slot": "SCEPTILE",
+"ticker": null,
+"base": [
+70,
+85,
+65,
+120,
+105,
+85
+],
+"types": [
+"FLORA"
+]
+},
+"280": {
+"slot": "TORCHIC",
+"ticker": null,
+"base": [
+45,
+60,
+40,
+45,
+70,
+50
+],
+"types": [
+"BLAZE"
+]
+},
+"281": {
+"slot": "COMBUSKEN",
+"ticker": "COQ",
+"base": [
+60,
+85,
+60,
+55,
+85,
+60
+],
+"types": [
+"BLAZE",
+"COMBAT"
+]
+},
+"282": {
+"slot": "BLAZIKEN",
+"ticker": null,
+"base": [
+80,
+120,
+70,
+80,
+110,
+70
+],
+"types": [
+"BLAZE",
+"COMBAT"
+]
+},
+"283": {
+"slot": "MUDKIP",
+"ticker": null,
+"base": [
+50,
+70,
+50,
+40,
+50,
+50
+],
+"types": [
+"TIDE"
+]
+},
+"284": {
+"slot": "MARSHTOMP",
+"ticker": null,
+"base": [
+70,
+85,
+70,
+50,
+60,
+70
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"285": {
+"slot": "SWAMPERT",
+"ticker": null,
+"base": [
+100,
+110,
+90,
+60,
+85,
+90
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"286": {
+"slot": "POOCHYENA",
+"ticker": "BABYDOGE",
+"base": [
+35,
+55,
+35,
+35,
+30,
+30
+],
+"types": [
+"SHADOW"
+]
+},
+"287": {
+"slot": "MIGHTYENA",
+"ticker": "SHIB",
+"base": [
+70,
+90,
+70,
+70,
+60,
+60
+],
+"types": [
+"SHADOW"
+]
+},
+"288": {
+"slot": "ZIGZAGOON",
+"ticker": "KISHU",
+"base": [
+38,
+30,
+41,
+60,
+30,
+41
+],
+"types": [
+"NEUTRAL"
+]
+},
+"289": {
+"slot": "LINOONE",
+"ticker": "AKITA",
+"base": [
+78,
+70,
+61,
+100,
+50,
+61
+],
+"types": [
+"NEUTRAL"
+]
+},
+"290": {
+"slot": "WURMPLE",
+"ticker": null,
+"base": [
+45,
+45,
+35,
+20,
+20,
+30
+],
+"types": [
+"SWARM"
+]
+},
+"291": {
+"slot": "SILCOON",
+"ticker": null,
+"base": [
+50,
+35,
+55,
+15,
+25,
+25
+],
+"types": [
+"SWARM"
+]
+},
+"292": {
+"slot": "BEAUTIFLY",
+"ticker": null,
+"base": [
+60,
+70,
+50,
+65,
+90,
+50
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"293": {
+"slot": "CASCOON",
+"ticker": null,
+"base": [
+50,
+35,
+55,
+15,
+25,
+25
+],
+"types": [
+"SWARM"
+]
+},
+"294": {
+"slot": "DUSTOX",
+"ticker": null,
+"base": [
+60,
+50,
+70,
+65,
+50,
+90
+],
+"types": [
+"SWARM",
+"TOXIC"
+]
+},
+"295": {
+"slot": "LOTAD",
+"ticker": "PANW",
+"base": [
+40,
+30,
+30,
+30,
+40,
+50
+],
+"types": [
+"TIDE",
+"FLORA"
+]
+},
+"296": {
+"slot": "LOMBRE",
+"ticker": "PATH",
+"base": [
+60,
+50,
+50,
+50,
+60,
+70
+],
+"types": [
+"TIDE",
+"FLORA"
+]
+},
+"297": {
+"slot": "LUDICOLO",
+"ticker": "PENG",
+"base": [
+80,
+70,
+70,
+70,
+90,
+100
+],
+"types": [
+"TIDE",
+"FLORA"
+]
+},
+"298": {
+"slot": "SEEDOT",
+"ticker": null,
+"base": [
+40,
+40,
+50,
+30,
+30,
+30
+],
+"types": [
+"FLORA"
+]
+},
+"299": {
+"slot": "NUZLEAF",
+"ticker": null,
+"base": [
+70,
+70,
+40,
+60,
+60,
+40
+],
+"types": [
+"FLORA",
+"SHADOW"
+]
+},
+"300": {
+"slot": "SHIFTRY",
+"ticker": null,
+"base": [
+90,
+100,
+60,
+80,
+90,
+60
+],
+"types": [
+"FLORA",
+"SHADOW"
+]
+},
+"301": {
+"slot": "NINCADA",
+"ticker": null,
+"base": [
+31,
+45,
+90,
+40,
+30,
+30
+],
+"types": [
+"SWARM",
+"TERRA"
+]
+},
+"302": {
+"slot": "NINJASK",
+"ticker": null,
+"base": [
+61,
+90,
+45,
+160,
+50,
+50
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"303": {
+"slot": "SHEDINJA",
+"ticker": null,
+"base": [
+1,
+90,
+45,
+40,
+30,
+30
+],
+"types": [
+"SWARM",
+"SPECTRE"
+]
+},
+"304": {
+"slot": "TAILLOW",
+"ticker": null,
+"base": [
+40,
+55,
+30,
+85,
+30,
+30
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"305": {
+"slot": "SWELLOW",
+"ticker": null,
+"base": [
+60,
+85,
+60,
+125,
+50,
+50
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"306": {
+"slot": "SHROOMISH",
+"ticker": null,
+"base": [
+60,
+40,
+60,
+35,
+40,
+60
+],
+"types": [
+"FLORA"
+]
+},
+"307": {
+"slot": "BRELOOM",
+"ticker": null,
+"base": [
+60,
+130,
+80,
+70,
+60,
+60
+],
+"types": [
+"FLORA",
+"COMBAT"
+]
+},
+"308": {
+"slot": "SPINDA",
+"ticker": null,
+"base": [
+60,
+60,
+60,
+60,
+60,
+60
+],
+"types": [
+"NEUTRAL"
+]
+},
+"309": {
+"slot": "WINGULL",
+"ticker": null,
+"base": [
+40,
+30,
+30,
+85,
+55,
+30
+],
+"types": [
+"TIDE",
+"WIND"
+]
+},
+"310": {
+"slot": "PELIPPER",
+"ticker": null,
+"base": [
+60,
+50,
+100,
+65,
+85,
+70
+],
+"types": [
+"TIDE",
+"WIND"
+]
+},
+"311": {
+"slot": "SURSKIT",
+"ticker": null,
+"base": [
+40,
+30,
+32,
+65,
+50,
+52
+],
+"types": [
+"SWARM",
+"TIDE"
+]
+},
+"312": {
+"slot": "MASQUERAIN",
+"ticker": null,
+"base": [
+70,
+60,
+62,
+60,
+80,
+82
+],
+"types": [
+"SWARM",
+"WIND"
+]
+},
+"313": {
+"slot": "WAILMER",
+"ticker": null,
+"base": [
+130,
+70,
+35,
+60,
+70,
+35
+],
+"types": [
+"TIDE"
+]
+},
+"314": {
+"slot": "WAILORD",
+"ticker": null,
+"base": [
+170,
+90,
+45,
+60,
+90,
+45
+],
+"types": [
+"TIDE"
+]
+},
+"315": {
+"slot": "SKITTY",
+"ticker": "POPCAT",
+"base": [
+50,
+45,
+45,
+50,
+35,
+35
+],
+"types": [
+"NEUTRAL"
+]
+},
+"316": {
+"slot": "DELCATTY",
+"ticker": "MEW",
+"base": [
+70,
+65,
+65,
+70,
+55,
+55
+],
+"types": [
+"NEUTRAL"
+]
+},
+"317": {
+"slot": "KECLEON",
+"ticker": null,
+"base": [
+60,
+90,
+70,
+40,
+60,
+120
+],
+"types": [
+"NEUTRAL"
+]
+},
+"318": {
+"slot": "BALTOY",
+"ticker": null,
+"base": [
+40,
+40,
+55,
+55,
+40,
+70
+],
+"types": [
+"TERRA",
+"PSIONIC"
+]
+},
+"319": {
+"slot": "CLAYDOL",
+"ticker": null,
+"base": [
+60,
+70,
+105,
+75,
+70,
+120
+],
+"types": [
+"TERRA",
+"PSIONIC"
+]
+},
+"320": {
+"slot": "NOSEPASS",
+"ticker": null,
+"base": [
+30,
+45,
+135,
+30,
+45,
+90
+],
+"types": [
+"STONE"
+]
+},
+"321": {
+"slot": "TORKOAL",
+"ticker": "TURBO",
+"base": [
+70,
+85,
+140,
+20,
+85,
+70
+],
+"types": [
+"BLAZE"
+]
+},
+"322": {
+"slot": "SABLEYE",
+"ticker": "TROLL",
+"base": [
+50,
+75,
+75,
+50,
+65,
+65
+],
+"types": [
+"SHADOW",
+"SPECTRE"
+]
+},
+"323": {
+"slot": "BARBOACH",
+"ticker": "QBTS",
+"base": [
+50,
+48,
+43,
+60,
+46,
+41
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"324": {
+"slot": "WHISCASH",
+"ticker": "QCOM",
+"base": [
+110,
+78,
+73,
+60,
+76,
+71
+],
+"types": [
+"TIDE",
+"TERRA"
+]
+},
+"325": {
+"slot": "LUVDISC",
+"ticker": null,
+"base": [
+43,
+30,
+55,
+97,
+40,
+65
+],
+"types": [
+"TIDE"
+]
+},
+"326": {
+"slot": "CORPHISH",
+"ticker": null,
+"base": [
+43,
+80,
+65,
+35,
+50,
+35
+],
+"types": [
+"TIDE"
+]
+},
+"327": {
+"slot": "CRAWDAUNT",
+"ticker": null,
+"base": [
+63,
+120,
+85,
+55,
+90,
+55
+],
+"types": [
+"TIDE",
+"SHADOW"
+]
+},
+"328": {
+"slot": "FEEBAS",
+"ticker": null,
+"base": [
+20,
+15,
+20,
+80,
+10,
+55
+],
+"types": [
+"TIDE"
+]
+},
+"329": {
+"slot": "MILOTIC",
+"ticker": "QQQ",
+"base": [
+95,
+60,
+79,
+81,
+100,
+125
+],
+"types": [
+"TIDE"
+]
+},
+"330": {
+"slot": "CARVANHA",
+"ticker": null,
+"base": [
+45,
+90,
+20,
+65,
+65,
+20
+],
+"types": [
+"TIDE",
+"SHADOW"
+]
+},
+"331": {
+"slot": "SHARPEDO",
+"ticker": null,
+"base": [
+70,
+120,
+40,
+95,
+95,
+40
+],
+"types": [
+"TIDE",
+"SHADOW"
+]
+},
+"332": {
+"slot": "TRAPINCH",
+"ticker": "POET",
+"base": [
+45,
+100,
+45,
+10,
+45,
+45
+],
+"types": [
+"TERRA"
+]
+},
+"333": {
+"slot": "VIBRAVA",
+"ticker": null,
+"base": [
+50,
+70,
+50,
+70,
+50,
+50
+],
+"types": [
+"TERRA",
+"WYRM"
+]
+},
+"334": {
+"slot": "FLYGON",
+"ticker": "POWL",
+"base": [
+80,
+100,
+80,
+100,
+80,
+80
+],
+"types": [
+"TERRA",
+"WYRM"
+]
+},
+"335": {
+"slot": "MAKUHITA",
+"ticker": null,
+"base": [
+72,
+60,
+30,
+25,
+20,
+30
+],
+"types": [
+"COMBAT"
+]
+},
+"336": {
+"slot": "HARIYAMA",
+"ticker": "GIGA",
+"base": [
+144,
+120,
+60,
+50,
+40,
+60
+],
+"types": [
+"COMBAT"
+]
+},
+"337": {
+"slot": "ELECTRIKE",
+"ticker": "VOLT",
+"base": [
+40,
+45,
+40,
+65,
+65,
+40
+],
+"types": [
+"VOLT"
+]
+},
+"338": {
+"slot": "MANECTRIC",
+"ticker": "DOG",
+"base": [
+70,
+75,
+60,
+105,
+105,
+60
+],
+"types": [
+"VOLT"
+]
+},
+"339": {
+"slot": "NUMEL",
+"ticker": null,
+"base": [
+60,
+60,
+40,
+35,
+65,
+45
+],
+"types": [
+"BLAZE",
+"TERRA"
+]
+},
+"340": {
+"slot": "CAMERUPT",
+"ticker": null,
+"base": [
+70,
+100,
+70,
+40,
+105,
+75
+],
+"types": [
+"BLAZE",
+"TERRA"
+]
+},
+"341": {
+"slot": "SPHEAL",
+"ticker": null,
+"base": [
+70,
+40,
+50,
+25,
+55,
+50
+],
+"types": [
+"FROST",
+"TIDE"
+]
+},
+"342": {
+"slot": "SEALEO",
+"ticker": null,
+"base": [
+90,
+60,
+70,
+45,
+75,
+70
+],
+"types": [
+"FROST",
+"TIDE"
+]
+},
+"343": {
+"slot": "WALREIN",
+"ticker": null,
+"base": [
+110,
+80,
+90,
+65,
+95,
+90
+],
+"types": [
+"FROST",
+"TIDE"
+]
+},
+"344": {
+"slot": "CACNEA",
+"ticker": null,
+"base": [
+50,
+85,
+40,
+35,
+85,
+40
+],
+"types": [
+"FLORA"
+]
+},
+"345": {
+"slot": "CACTURNE",
+"ticker": null,
+"base": [
+70,
+115,
+60,
+55,
+115,
+60
+],
+"types": [
+"FLORA",
+"SHADOW"
+]
+},
+"346": {
+"slot": "SNORUNT",
+"ticker": "QUBT",
+"base": [
+50,
+50,
+50,
+50,
+50,
+50
+],
+"types": [
+"FROST"
+]
+},
+"347": {
+"slot": "GLALIE",
+"ticker": null,
+"base": [
+80,
+80,
+80,
+80,
+80,
+80
+],
+"types": [
+"FROST"
+]
+},
+"348": {
+"slot": "LUNATONE",
+"ticker": null,
+"base": [
+70,
+55,
+65,
+70,
+95,
+85
+],
+"types": [
+"STONE",
+"PSIONIC"
+]
+},
+"349": {
+"slot": "SOLROCK",
+"ticker": null,
+"base": [
+70,
+95,
+85,
+70,
+55,
+65
+],
+"types": [
+"STONE",
+"PSIONIC"
+]
+},
+"350": {
+"slot": "AZURILL",
+"ticker": "PL",
+"base": [
+50,
+20,
+40,
+20,
+20,
+40
+],
+"types": [
+"NEUTRAL"
+]
+},
+"351": {
+"slot": "SPOINK",
+"ticker": null,
+"base": [
+60,
+25,
+35,
+60,
+70,
+80
+],
+"types": [
+"PSIONIC"
+]
+},
+"352": {
+"slot": "GRUMPIG",
+"ticker": null,
+"base": [
+80,
+45,
+65,
+80,
+90,
+110
+],
+"types": [
+"PSIONIC"
+]
+},
+"353": {
+"slot": "PLUSLE",
+"ticker": null,
+"base": [
+60,
+50,
+40,
+95,
+85,
+75
+],
+"types": [
+"VOLT"
+]
+},
+"354": {
+"slot": "MINUN",
+"ticker": null,
+"base": [
+60,
+40,
+50,
+95,
+75,
+85
+],
+"types": [
+"VOLT"
+]
+},
+"355": {
+"slot": "MAWILE",
+"ticker": null,
+"base": [
+50,
+85,
+85,
+50,
+55,
+55
+],
+"types": [
+"ALLOY"
+]
+},
+"356": {
+"slot": "MEDITITE",
+"ticker": null,
+"base": [
+30,
+40,
+55,
+60,
+40,
+55
+],
+"types": [
+"COMBAT",
+"PSIONIC"
+]
+},
+"357": {
+"slot": "MEDICHAM",
+"ticker": null,
+"base": [
+60,
+60,
+75,
+80,
+60,
+75
+],
+"types": [
+"COMBAT",
+"PSIONIC"
+]
+},
+"358": {
+"slot": "SWABLU",
+"ticker": null,
+"base": [
+45,
+40,
+60,
+50,
+40,
+75
+],
+"types": [
+"NEUTRAL",
+"WIND"
+]
+},
+"359": {
+"slot": "ALTARIA",
+"ticker": "HIGHER",
+"base": [
+75,
+70,
+90,
+80,
+70,
+105
+],
+"types": [
+"WYRM",
+"WIND"
+]
+},
+"360": {
+"slot": "WYNAUT",
+"ticker": null,
+"base": [
+95,
+23,
+48,
+23,
+23,
+48
+],
+"types": [
+"PSIONIC"
+]
+},
+"361": {
+"slot": "DUSKULL",
+"ticker": null,
+"base": [
+20,
+40,
+90,
+25,
+30,
+90
+],
+"types": [
+"SPECTRE"
+]
+},
+"362": {
+"slot": "DUSCLOPS",
+"ticker": null,
+"base": [
+40,
+70,
+130,
+25,
+60,
+130
+],
+"types": [
+"SPECTRE"
+]
+},
+"363": {
+"slot": "ROSELIA",
+"ticker": null,
+"base": [
+50,
+60,
+45,
+65,
+100,
+80
+],
+"types": [
+"FLORA",
+"TOXIC"
+]
+},
+"364": {
+"slot": "SLAKOTH",
+"ticker": "MUMU",
+"base": [
+60,
+60,
+60,
+30,
+35,
+35
+],
+"types": [
+"NEUTRAL"
+]
+},
+"365": {
+"slot": "VIGOROTH",
+"ticker": "SIGMA",
+"base": [
+80,
+80,
+80,
+90,
+55,
+55
+],
+"types": [
+"NEUTRAL"
+]
+},
+"366": {
+"slot": "SLAKING",
+"ticker": "SLERF",
+"base": [
+150,
+160,
+100,
+100,
+95,
+65
+],
+"types": [
+"NEUTRAL"
+]
+},
+"367": {
+"slot": "GULPIN",
+"ticker": null,
+"base": [
+70,
+43,
+53,
+40,
+43,
+53
+],
+"types": [
+"TOXIC"
+]
+},
+"368": {
+"slot": "SWALOT",
+"ticker": null,
+"base": [
+100,
+73,
+83,
+55,
+73,
+83
+],
+"types": [
+"TOXIC"
+]
+},
+"369": {
+"slot": "TROPIUS",
+"ticker": null,
+"base": [
+99,
+68,
+83,
+51,
+72,
+87
+],
+"types": [
+"FLORA",
+"WIND"
+]
+},
+"370": {
+"slot": "WHISMUR",
+"ticker": null,
+"base": [
+64,
+51,
+23,
+28,
+51,
+23
+],
+"types": [
+"NEUTRAL"
+]
+},
+"371": {
+"slot": "LOUDRED",
+"ticker": null,
+"base": [
+84,
+71,
+43,
+48,
+71,
+43
+],
+"types": [
+"NEUTRAL"
+]
+},
+"372": {
+"slot": "EXPLOUD",
+"ticker": null,
+"base": [
+104,
+91,
+63,
+68,
+91,
+63
+],
+"types": [
+"NEUTRAL"
+]
+},
+"373": {
+"slot": "CLAMPERL",
+"ticker": null,
+"base": [
+35,
+64,
+85,
+32,
+74,
+55
+],
+"types": [
+"TIDE"
+]
+},
+"374": {
+"slot": "HUNTAIL",
+"ticker": null,
+"base": [
+55,
+104,
+105,
+52,
+94,
+75
+],
+"types": [
+"TIDE"
+]
+},
+"375": {
+"slot": "GOREBYSS",
+"ticker": null,
+"base": [
+55,
+84,
+105,
+52,
+114,
+75
+],
+"types": [
+"TIDE"
+]
+},
+"376": {
+"slot": "ABSOL",
+"ticker": null,
+"base": [
+65,
+130,
+60,
+75,
+75,
+60
+],
+"types": [
+"SHADOW"
+]
+},
+"377": {
+"slot": "SHUPPET",
+"ticker": null,
+"base": [
+44,
+75,
+35,
+45,
+63,
+33
+],
+"types": [
+"SPECTRE"
+]
+},
+"378": {
+"slot": "BANETTE",
+"ticker": null,
+"base": [
+64,
+115,
+65,
+65,
+83,
+63
+],
+"types": [
+"SPECTRE"
+]
+},
+"379": {
+"slot": "SEVIPER",
+"ticker": "PWR",
+"base": [
+73,
+100,
+60,
+65,
+100,
+60
+],
+"types": [
+"TOXIC"
+]
+},
+"380": {
+"slot": "ZANGOOSE",
+"ticker": "PR",
+"base": [
+73,
+115,
+60,
+90,
+60,
+60
+],
+"types": [
+"NEUTRAL"
+]
+},
+"381": {
+"slot": "RELICANTH",
+"ticker": null,
+"base": [
+100,
+90,
+130,
+55,
+45,
+65
+],
+"types": [
+"TIDE",
+"STONE"
+]
+},
+"382": {
+"slot": "ARON",
+"ticker": null,
+"base": [
+50,
+70,
+100,
+30,
+40,
+40
+],
+"types": [
+"ALLOY",
+"STONE"
+]
+},
+"383": {
+"slot": "LAIRON",
+"ticker": null,
+"base": [
+60,
+90,
+140,
+40,
+50,
+50
+],
+"types": [
+"ALLOY",
+"STONE"
+]
+},
+"384": {
+"slot": "AGGRON",
+"ticker": null,
+"base": [
+70,
+110,
+180,
+50,
+60,
+60
+],
+"types": [
+"ALLOY",
+"STONE"
+]
+},
+"385": {
+"slot": "CASTFORM",
+"ticker": null,
+"base": [
+70,
+70,
+70,
+70,
+70,
+70
+],
+"types": [
+"NEUTRAL"
+]
+},
+"386": {
+"slot": "VOLBEAT",
+"ticker": null,
+"base": [
+65,
+73,
+55,
+85,
+47,
+75
+],
+"types": [
+"SWARM"
+]
+},
+"387": {
+"slot": "ILLUMISE",
+"ticker": null,
+"base": [
+65,
+47,
+55,
+85,
+73,
+75
+],
+"types": [
+"SWARM"
+]
+},
+"388": {
+"slot": "LILEEP",
+"ticker": null,
+"base": [
+66,
+41,
+77,
+23,
+61,
+87
+],
+"types": [
+"STONE",
+"FLORA"
+]
+},
+"389": {
+"slot": "CRADILY",
+"ticker": null,
+"base": [
+86,
+81,
+97,
+43,
+81,
+107
+],
+"types": [
+"STONE",
+"FLORA"
+]
+},
+"390": {
+"slot": "ANORITH",
+"ticker": null,
+"base": [
+45,
+95,
+50,
+75,
+40,
+50
+],
+"types": [
+"STONE",
+"SWARM"
+]
+},
+"391": {
+"slot": "ARMALDO",
+"ticker": null,
+"base": [
+75,
+125,
+100,
+45,
+70,
+80
+],
+"types": [
+"STONE",
+"SWARM"
+]
+},
+"392": {
+"slot": "RALTS",
+"ticker": "PFE",
+"base": [
+28,
+25,
+25,
+40,
+45,
+35
+],
+"types": [
+"PSIONIC",
+"NEUTRAL"
+]
+},
+"393": {
+"slot": "KIRLIA",
+"ticker": null,
+"base": [
+38,
+35,
+35,
+50,
+65,
+55
+],
+"types": [
+"PSIONIC"
+]
+},
+"394": {
+"slot": "GARDEVOIR",
+"ticker": null,
+"base": [
+68,
+65,
+65,
+80,
+125,
+115
+],
+"types": [
+"PSIONIC"
+]
+},
+"395": {
+"slot": "BAGON",
+"ticker": null,
+"base": [
+45,
+75,
+60,
+50,
+40,
+30
+],
+"types": [
+"WYRM"
+]
+},
+"396": {
+"slot": "SHELGON",
+"ticker": null,
+"base": [
+65,
+95,
+100,
+50,
+60,
+50
+],
+"types": [
+"WYRM"
+]
+},
+"397": {
+"slot": "SALAMENCE",
+"ticker": null,
+"base": [
+95,
+135,
+80,
+100,
+110,
+80
+],
+"types": [
+"WYRM",
+"WIND"
+]
+},
+"398": {
+"slot": "BELDUM",
+"ticker": null,
+"base": [
+40,
+55,
+80,
+30,
+35,
+60
+],
+"types": [
+"ALLOY",
+"PSIONIC"
+]
+},
+"399": {
+"slot": "METANG",
+"ticker": "AI16Z",
+"base": [
+60,
+75,
+100,
+50,
+55,
+80
+],
+"types": [
+"ALLOY",
+"PSIONIC"
+]
+},
+"400": {
+"slot": "METAGROSS",
+"ticker": null,
+"base": [
+80,
+135,
+130,
+70,
+95,
+90
+],
+"types": [
+"ALLOY",
+"PSIONIC"
+]
+},
+"401": {
+"slot": "REGIROCK",
+"ticker": null,
+"base": [
+80,
+100,
+200,
+50,
+50,
+100
+],
+"types": [
+"STONE"
+]
+},
+"402": {
+"slot": "REGICE",
+"ticker": null,
+"base": [
+80,
+50,
+100,
+50,
+100,
+200
+],
+"types": [
+"FROST"
+]
+},
+"403": {
+"slot": "REGISTEEL",
+"ticker": null,
+"base": [
+80,
+75,
+150,
+50,
+75,
+150
+],
+"types": [
+"ALLOY"
+]
+},
+"404": {
+"slot": "KYOGRE",
+"ticker": null,
+"base": [
+100,
+100,
+90,
+90,
+150,
+140
+],
+"types": [
+"TIDE"
+]
+},
+"405": {
+"slot": "GROUDON",
+"ticker": null,
+"base": [
+100,
+150,
+140,
+90,
+100,
+90
+],
+"types": [
+"TERRA"
+]
+},
+"406": {
+"slot": "RAYQUAZA",
+"ticker": null,
+"base": [
+105,
+150,
+90,
+95,
+150,
+90
+],
+"types": [
+"WYRM",
+"WIND"
+]
+},
+"407": {
+"slot": "LATIAS",
+"ticker": "RBLX",
+"base": [
+80,
+80,
+90,
+110,
+110,
+130
+],
+"types": [
+"WYRM",
+"PSIONIC"
+]
+},
+"408": {
+"slot": "LATIOS",
+"ticker": "RCAT",
+"base": [
+80,
+90,
+80,
+110,
+130,
+110
+],
+"types": [
+"WYRM",
+"PSIONIC"
+]
+},
+"409": {
+"slot": "JIRACHI",
+"ticker": null,
+"base": [
+100,
+100,
+100,
+100,
+100,
+100
+],
+"types": [
+"ALLOY",
+"PSIONIC"
+]
+},
+"410": {
+"slot": "DEOXYS",
+"ticker": null,
+"base": [
+50,
+150,
+50,
+150,
+150,
+50
+],
+"types": [
+"PSIONIC"
+]
+},
+"411": {
+"slot": "CHIMECHO",
+"ticker": null,
+"base": [
+65,
+50,
+70,
+65,
+95,
+80
+],
+"types": [
+"PSIONIC"
+]
+}
+}
+}

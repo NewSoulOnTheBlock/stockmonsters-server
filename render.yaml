@@ -1,0 +1,33 @@
+# Render Blueprint for the Stockmonsters game server.
+# The database lives on the persistent disk; the NFT update-authority key is a
+# secret set in the Render dashboard (never committed).
+services:
+  - type: web
+    name: stockmonsters-server
+    runtime: docker
+    plan: starter            # WebSockets + a persistent disk need a paid instance
+    region: oregon
+    healthCheckPath: /health
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DB_PATH
+        value: /data/stockmonsters.db
+      - key: STATIC_DIR
+        value: /app/no-static     # the page is served by Vercel (stockmonsters.app)
+      - key: ALLOWED_ORIGINS
+        value: https://stockmonsters.app,https://www.stockmonsters.app,https://stock-delta-tan.vercel.app,https://stock-ljiulguis-projects.vercel.app
+      - key: PUBLIC_URL
+        value: https://stockmonsters-server.onrender.com
+      - key: NFT_CLUSTER
+        value: mainnet-beta
+      - key: NFT_COLLECTION
+        value: 4CdQLEvutWuUWqvwLgh7UVCqD6GF1LxNNBGGGjdyqKas
+      - key: NFT_AUTHORITY_KEY  # JSON byte array from data/authority.json
+        sync: false
+      - key: SOLANA_RPC_URL     # a paid RPC (e.g. Helius) is strongly recommended
+        sync: false
