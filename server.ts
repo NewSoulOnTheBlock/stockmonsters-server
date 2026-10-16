@@ -8,9 +8,9 @@
 import { join, normalize } from "node:path";
 import type { ServerWebSocket } from "bun";
 import { decodeMon, hexToBytes, validateMon, type MonSummary } from "./pokemon";
-import { AuthError, bearer, createAuth, shortWallet } from "./auth";
+import { AuthError, bearer, createAuth, makeVerifier, shortWallet } from "./auth";
 import { openDb } from "./db";
-import { createNft, loadNftConfig, NftError, type PreparedSwap } from "./nft";
+import { createNft, DEFAULT_RPC, loadNftConfig, NftError, type PreparedSwap } from "./nft";
 
 const PORT = Number(process.env.PORT ?? 8642);
 
@@ -48,19 +48,20 @@ const CHAT_COOLDOWN_MS = 800;
 const POS_MIN_INTERVAL_MS = 30;
 
 const db = openDb();
-const auth = createAuth(db);
+const nftConfig = loadNftConfig();
+// An RPC lets smart-contract wallets (Safe, Coinbase Smart Wallet) sign in too.
+const auth = createAuth(db, Date.now, makeVerifier(process.env.ETH_RPC_URL ?? nftConfig?.rpcUrl ?? DEFAULT_RPC));
 
 // ---- NFTs ------------------------------------------------------------------
-// Off until tools/nft-setup.ts has created the collection (data/nft.json).
+// Off until the contract is deployed and configured (tools/nft-setup.ts).
 const HOMETOWN_NAMES: Record<number, string> = {
   88: "GENESIS TOWN", 89: "GREENBACK CITY", 90: "BLUECHIP CITY", 91: "DIVIDEND FALLS", 92: "DELISTED TOWN",
   93: "LIQUIDITY PORT", 94: "MEGACAP CITY", 95: "FOMO CITY", 96: "BURN ISLAND", 98: "EXCHANGE CITY",
 };
 const hometownQuery = db.query<{ hometown: number | null }, [string]>("SELECT hometown FROM profiles WHERE wallet = ?");
 const hometownOf = (wallet: string) => HOMETOWN_NAMES[hometownQuery.get(wallet)?.hometown ?? -1] ?? null;
-const nftConfig = loadNftConfig();
 const nft = nftConfig ? createNft(db, nftConfig, hometownOf) : null;
-console.log(nft ? `NFTs on ${nftConfig!.cluster}, collection ${nftConfig!.collection}` : "NFTs off: run tools/nft-setup.ts");
+console.log(nft ? `NFTs on chain ${nftConfig!.chainId}, contract ${nftConfig!.contract}` : "NFTs off: see tools/nft-setup.ts");
 const ART_DIR = join(import.meta.dir, "art");
 
 // NFT owners change outside the game (marketplace sales), so poll the chain.
@@ -81,14 +82,14 @@ async function nftApi(req: Request, url: URL): Promise<Response> {
   try {
     if (route === "GET /nft/config") return Response.json(nft ? { enabled: true, ...nft.config() } : { enabled: false });
     if (route === "GET /nft/collection.json")
-      return Response.json({ name: "Stock Monsters", symbol: "STKMON", description: "Every Stock Monster, living on-chain. Traits update as they level up.", image: `/nft/art/7.png` });
+      return Response.json({ name: "Stock Monsters", description: "Every Stock Monster, living on Ethereum. Traits update as they level up.", image: `${nftConfig?.publicUrl ?? ""}/nft/art/7.png`, external_link: nftConfig?.publicUrl ?? "" });
     const art = /^GET \/nft\/art\/(\d+s?)\.png$/.exec(route);
     if (art) {
       const file = Bun.file(join(ART_DIR, `${art[1]}.png`)); // "7" or "7s" (shiny); the regex keeps it safe
       return (await file.exists()) ? new Response(file, { headers: { "Cache-Control": "public, max-age=86400" } }) : new Response("not found", { status: 404 });
     }
     if (!nft) return Response.json({ error: "NFTs aren't set up on this server." }, { status: 503 });
-    const meta = /^GET \/nft\/meta\/(\w+)\.json$/.exec(route);
+    const meta = /^GET \/nft\/meta\/(\d{1,20})\.json$/.exec(route);
     if (meta) {
       const m = nft.metadata(meta[1]);
       return m ? Response.json(m, { headers: { "Cache-Control": "no-cache" } }) : Response.json({ error: "not found" }, { status: 404 });
@@ -102,14 +103,14 @@ async function nftApi(req: Request, url: URL): Promise<Response> {
         return Response.json(nft.inventory(wallet), { headers: { "Cache-Control": "no-store" } });
       case "POST /nft/copy": return Response.json(nft.markCopy(wallet, body));
       case "POST /nft/prepare-mint": return Response.json(await nft.prepareMint(wallet, body.mon));
-      case "POST /nft/prepare-sync": return Response.json(await nft.prepareSync(wallet, body.mon));
+      case "POST /nft/sync": return Response.json(await nft.sync(wallet, body.mon));
       case "POST /nft/submit": return Response.json(await nft.submit(wallet, body));
     }
     return Response.json({ error: "not found" }, { status: 404 });
   } catch (e) {
     if (e instanceof NftError) return Response.json({ error: e.message }, { status: e.status });
     console.error("[nft]", e);
-    return Response.json({ error: "The Solana request failed; try again." }, { status: 502 });
+    return Response.json({ error: "The Ethereum request failed; try again." }, { status: 502 });
   }
 }
 
@@ -133,8 +134,9 @@ let nextId = 1;
 
 // ---- trading ---------------------------------------------------------------
 // Flow: request -> respond(accept) -> both offer (validated here) -> both
-// confirm -> [NFTs on: both wallets sign one transaction swapping the two
-// NFTs; the server sends it] -> server sends each side the other's mon ->
+// confirm -> [NFTs on: the partner (b) signs an EIP-712 swap for free, the
+// requester (a) sends swap() and pays gas, the server reads the receipt] ->
+// server sends each side the other's mon ->
 // both report the result. The NFT is the monster, so the games only swap
 // once the NFTs have.
 // Any offer change clears both confirmations, so nobody can swap the mon
@@ -146,9 +148,8 @@ type Trade = {
   confirmed: Set<string>;
   executing: boolean;
   results: Map<string, boolean>;
-  swap?: PreparedSwap;               // the NFT swap both wallets are signing
-  signed: Map<string, string>;       // player id -> their signed copy (base64)
-  swapSent: boolean;
+  swap?: PreparedSwap;               // the NFT swap: b signs it, a sends it
+  swapSent: boolean;                 // a reported the transaction hash
 };
 const REQUEST_TTL_MS = 30_000;
 const tradeRequests = new Map<string, number>(); // "from>to" -> expiry
@@ -270,7 +271,7 @@ function onTrade(ws: ServerWebSocket<Player>, m: any) {
       if (!expiry || expiry < Date.now() || !players.has(from)) return fail("That request expired.");
       if (!m.accept) return sendTo(from, { t: "trade_closed", reason: `${me.name} declined.` });
       if (tradeOf.has(me.id) || tradeOf.has(from)) return fail("One of you is already trading.");
-      const t: Trade = { a: from, b: me.id, offers: new Map(), confirmed: new Set(), executing: false, results: new Map(), signed: new Map(), swapSent: false };
+      const t: Trade = { a: from, b: me.id, offers: new Map(), confirmed: new Set(), executing: false, results: new Map(), swapSent: false };
       tradeOf.set(from, t); tradeOf.set(me.id, t);
       sendTo(from, { t: "trade_open", partner: { id: me.id, name: me.name } });
       return send(ws, { t: "trade_open", partner: { id: from, name: players.get(from)!.name } });
@@ -307,18 +308,27 @@ function onTrade(ws: ServerWebSocket<Player>, m: any) {
       nft.prepareSwap(side(t.a), side(t.b)).then((swap) => {
         if (tradeOf.get(t.a) !== t) return; // cancelled meanwhile
         t.swap = swap;
-        const tx = Buffer.from(swap.tx).toString("base64");
-        for (const id of [t.a, t.b]) sendTo(id, { t: "trade_sign", tx, cluster: nft.config().cluster });
+        sendTo(t.b, { t: "trade_sign", typedData: swap.typedData });
+        sendTo(t.a, { t: "trade_wait", text: `Waiting for ${players.get(t.b)?.name ?? "your partner"} to approve the swap in their wallet…` });
       }).catch((e) => closeTrade(t, e instanceof NftError ? e.message : "Couldn't set up the NFT swap; try again."));
       return;
     }
     case "trade_signed": {
-      if (!t.swap || t.swapSent || t.signed.has(me.id)) return;
-      t.signed.set(me.id, String(m.tx));
-      if (t.signed.size < 2) return;
-      t.swapSent = true;
+      // Only the partner signs; the requester sends.
+      if (!t.swap || t.swap.signature || me.id !== t.b) return;
       const swap = t.swap;
-      nft!.finishSwap(swap, t.signed.get(t.a)!, t.signed.get(t.b)!)
+      nft!.acceptSwapSignature(swap, m.signature).then((txReq) => {
+        if (tradeOf.get(t.a) !== t) return;
+        sendTo(t.a, { t: "trade_send", tx: txReq });
+        sendTo(t.b, { t: "trade_wait", text: `Waiting for ${players.get(t.a)?.name ?? "your partner"} to send the swap…` });
+      }).catch((e) => closeTrade(t, e instanceof NftError ? e.message : "Couldn't check the swap signature; nothing moved."));
+      return;
+    }
+    case "trade_sent": {
+      if (!t.swap?.signature || t.swapSent || me.id !== t.a) return;
+      t.swapSent = true;
+      sendTo(t.b, { t: "trade_wait", text: "Swapping on Ethereum…" });
+      nft!.finishSwap(t.swap, m.hash)
         .then(() => execTrade(t))
         .catch((e) => closeTrade(t, e instanceof NftError ? e.message : "The NFT swap didn't go through; nothing moved."));
       return;
@@ -333,7 +343,7 @@ function onTrade(ws: ServerWebSocket<Player>, m: any) {
       return closeTrade(t, ok ? "complete" : "One side's party changed mid-trade; check both parties.");
     }
     case "trade_cancel":
-      // Until the swap is sent, either wallet can still back out.
+      // Until the swap is sent, either side can still back out.
       if (t.executing && (!t.swap || t.swapSent)) return;
       return closeTrade(t, `${me.name} cancelled.`);
   }
@@ -430,7 +440,7 @@ function onChat(ws: ServerWebSocket<Player>, m: any) {
 // ---- login + profile API ---------------------------------------------------
 async function api(req: Request, url: URL): Promise<Response> {
   const route = `${req.method} ${url.pathname}`;
-  const json = async () => { try { return await req.json(); } catch { throw new AuthError("Body must be JSON."); } };
+  const json = async (): Promise<any> => { try { return await req.json(); } catch { throw new AuthError("Body must be JSON."); } };
   const needSession = () => {
     const wallet = auth.sessionWallet(bearer(req));
     if (!wallet) throw new AuthError("Not logged in.", 401);
@@ -441,7 +451,7 @@ async function api(req: Request, url: URL): Promise<Response> {
       case "GET /auth/nonce":
         return Response.json(auth.issueNonce(url.searchParams.get("wallet")), { headers: { "Cache-Control": "no-store" } });
       case "POST /auth/verify":
-        return Response.json(auth.verifyLogin(await json()));
+        return Response.json(await auth.verifyLogin(await json()));
       case "GET /auth/session": {
         const s = auth.session(bearer(req));
         return s ? Response.json(s, { headers: { "Cache-Control": "no-store" } }) : Response.json({ error: "Not logged in." }, { status: 401 });
