@@ -23,11 +23,11 @@ services:
         value: https://stockmonsters.app,https://www.stockmonsters.app,https://stock-delta-tan.vercel.app,https://stock-ljiulguis-projects.vercel.app
       - key: PUBLIC_URL
         value: https://stockmonsters-server.onrender.com
-      - key: NFT_CHAIN_ID
-        value: "1"              # Ethereum mainnet
-      - key: NFT_CONTRACT       # StockMonsters address, after contracts/ is deployed
+      - key: NFT_CLUSTER
+        value: mainnet-beta
+      - key: NFT_COLLECTION
+        value: 4CdQLEvutWuUWqvwLgh7UVCqD6GF1LxNNBGGGjdyqKas
+      - key: NFT_AUTHORITY_KEY  # JSON byte array from data/authority.json
         sync: false
-      - key: NFT_SIGNER_KEY     # 0x private key from data/signer.json (voucher key, holds no ETH)
-        sync: false
-      - key: ETH_RPC_URL        # a paid RPC (Alchemy, Infura, QuickNode) is strongly recommended
+      - key: SOLANA_RPC_URL     # a paid RPC (e.g. Helius) is strongly recommended
         sync: false

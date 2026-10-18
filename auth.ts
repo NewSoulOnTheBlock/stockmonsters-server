@@ -1,41 +1,73 @@
-// Sign-in with an Ethereum wallet. The browser asks for a nonce, has the
-// wallet sign a plain-text message containing it (personal_sign; no
-// transactions, no keys), and we check the signature against the address.
-// Smart-contract wallets (Safe, Coinbase Smart Wallet) verify through
-// ERC-1271/6492 when an RPC is configured. A good signature buys a 30-day
-// session token.
+// Sign-in with a Solana wallet. The browser asks for a nonce, has the wallet
+// sign a plain-text message containing it (signMessage only; no transactions,
+// no keys), and we check the ed25519 signature against the wallet address.
+// A good signature buys a 30-day session token.
 
 import type { Database } from "bun:sqlite";
-import { randomBytes } from "node:crypto";
-import { createPublicClient, getAddress, http, isAddress, verifyMessage, type Hex } from "viem";
+import { createPublicKey, randomBytes, verify } from "node:crypto";
 
 export const NONCE_TTL_MS = 5 * 60_000;
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60_000;
 export const MAX_NAME = 10;
 const MAX_MESSAGE = 512;
 
-/** The checksummed address, or null if it isn't one. */
-export function walletAddress(wallet: unknown): string | null {
-  if (typeof wallet !== "string" || !isAddress(wallet, { strict: false })) return null;
-  return getAddress(wallet);
+// ---- base58 (Bitcoin alphabet, as Solana uses) -----------------------------
+const ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+const ALPHABET_MAP = new Map([...ALPHABET].map((c, i) => [c, i]));
+
+export function base58Decode(s: string): Uint8Array {
+  if (typeof s !== "string" || !s) throw new Error("empty base58");
+  const bytes: number[] = []; // little-endian base-256 accumulator
+  for (const c of s) {
+    const v = ALPHABET_MAP.get(c);
+    if (v === undefined) throw new Error("bad base58 character");
+    let carry = v;
+    for (let i = 0; i < bytes.length; i++) {
+      carry += bytes[i] * 58;
+      bytes[i] = carry & 0xff;
+      carry >>= 8;
+    }
+    while (carry) { bytes.push(carry & 0xff); carry >>= 8; }
+  }
+  // Each leading '1' is a leading zero byte.
+  for (const c of s) { if (c !== "1") break; bytes.push(0); }
+  return Uint8Array.from(bytes.reverse());
 }
 
-export const shortWallet = (w: string) => (w.length > 12 ? `${w.slice(0, 6)}…${w.slice(-4)}` : w);
+/** The 32-byte ed25519 public key for a wallet address, or null if it isn't one. */
+export function walletKey(wallet: unknown): Uint8Array | null {
+  if (typeof wallet !== "string" || wallet.length < 32 || wallet.length > 44) return null;
+  try {
+    const k = base58Decode(wallet);
+    return k.length === 32 ? k : null;
+  } catch { return null; }
+}
+
+export const shortWallet = (w: string) => (w.length > 8 ? `${w.slice(0, 4)}…${w.slice(-4)}` : w);
 
 export function loginMessage(wallet: string, nonce: string, issued: string) {
   return `Stock Monsters login\nWallet: ${wallet}\nNonce: ${nonce}\nIssued: ${issued}`;
 }
-const MESSAGE_RE = /^Stock Monsters login\nWallet: (0x[0-9a-fA-F]{40})\nNonce: ([0-9a-f]{32})\nIssued: (\S+)$/;
+const MESSAGE_RE = /^Stock Monsters login\nWallet: (\S+)\nNonce: ([0-9a-f]{32})\nIssued: (\S+)$/;
 
-export type VerifyFn = (address: string, message: string, signature: Hex) => Promise<boolean>;
+export function verifyEd25519(pubkey: Uint8Array, message: Uint8Array, signature: Uint8Array): boolean {
+  if (pubkey.length !== 32 || signature.length !== 64) return false;
+  try {
+    const key = createPublicKey({
+      key: { kty: "OKP", crv: "Ed25519", x: Buffer.from(pubkey).toString("base64url") },
+      format: "jwk",
+    });
+    return verify(null, message, key, signature);
+  } catch { return false; }
+}
 
-/** EOAs locally; with an RPC, smart-contract wallets too. */
-export function makeVerifier(rpcUrl?: string): VerifyFn {
-  if (!rpcUrl) return (address, message, signature) =>
-    verifyMessage({ address: address as Hex, message, signature }).catch(() => false);
-  const client = createPublicClient({ transport: http(rpcUrl) });
-  return (address, message, signature) =>
-    client.verifyMessage({ address: address as Hex, message, signature }).catch(() => false);
+function decodeSignature(sig: unknown): Uint8Array | null {
+  if (typeof sig !== "string" || sig.length > 128) return null;
+  if (/^[A-Za-z0-9+/]+={0,2}$/.test(sig)) {
+    const b = Buffer.from(sig, "base64");
+    if (b.length === 64) return new Uint8Array(b);
+  }
+  try { const b = base58Decode(sig); return b.length === 64 ? b : null; } catch { return null; }
 }
 
 // ---- profiles ---------------------------------------------------------------
@@ -49,7 +81,7 @@ export class AuthError extends Error {
   constructor(message: string, public status = 400) { super(message); }
 }
 
-export function createAuth(db: Database, now: () => number = Date.now, verify: VerifyFn = makeVerifier()) {
+export function createAuth(db: Database, now: () => number = Date.now) {
   const q = {
     putNonce: db.query("INSERT INTO nonces (nonce, wallet, expires_at) VALUES (?, ?, ?)"),
     takeNonce: db.query("DELETE FROM nonces WHERE nonce = ? AND wallet = ? AND expires_at > ? RETURNING nonce"),
@@ -71,36 +103,37 @@ export function createAuth(db: Database, now: () => number = Date.now, verify: V
   }
 
   return {
-    issueNonce(input: unknown): { nonce: string; expiresAt: number } {
-      const wallet = walletAddress(input);
-      if (!wallet) throw new AuthError("Not an Ethereum wallet address.");
+    issueNonce(wallet: unknown): { nonce: string; expiresAt: number } {
+      if (!walletKey(wallet)) throw new AuthError("Not a Solana wallet address.");
       const t = now();
       q.pruneNonces.run(t);
       // Nonces are free to request; don't let one address fill the table.
-      if (q.walletNonces.get(wallet, t)!.n >= 10) throw new AuthError("Too many pending logins; wait a few minutes.", 429);
+      if (q.walletNonces.get(wallet as string, t)!.n >= 10) throw new AuthError("Too many pending logins; wait a few minutes.", 429);
       const nonce = randomBytes(16).toString("hex");
       const expiresAt = t + NONCE_TTL_MS;
-      q.putNonce.run(nonce, wallet, expiresAt);
+      q.putNonce.run(nonce, wallet as string, expiresAt);
       return { nonce, expiresAt };
     },
 
-    async verifyLogin(body: { wallet?: unknown; message?: unknown; signature?: unknown }) {
-      const { message, signature } = body ?? {};
-      const wallet = walletAddress(body?.wallet);
-      if (!wallet) throw new AuthError("Not an Ethereum wallet address.");
+    verifyLogin(body: { wallet?: unknown; message?: unknown; signature?: unknown }) {
+      const { wallet, message, signature } = body ?? {};
+      const key = walletKey(wallet);
+      if (!key) throw new AuthError("Not a Solana wallet address.");
       if (typeof message !== "string" || message.length > MAX_MESSAGE) throw new AuthError("Bad login message.");
       const m = MESSAGE_RE.exec(message);
-      if (!m || getAddress(m[1]) !== wallet) throw new AuthError("Login message doesn't match this wallet.");
-      if (typeof signature !== "string" || !/^0x[0-9a-fA-F]{2,4096}$/.test(signature)) throw new AuthError("Bad signature.");
-      if (!(await verify(wallet, message, signature as Hex))) throw new AuthError("Signature check failed.", 401);
+      if (!m || m[1] !== wallet) throw new AuthError("Login message doesn't match this wallet.");
+      const sig = decodeSignature(signature);
+      if (!sig || !verifyEd25519(key, new TextEncoder().encode(message), sig)) {
+        throw new AuthError("Signature check failed.", 401);
+      }
       // Consume the nonce only now, atomically: a replay finds nothing to delete.
-      if (!q.takeNonce.get(m[2], wallet, now())) {
+      if (!q.takeNonce.get(m[2], wallet as string, now())) {
         throw new AuthError("That login request expired or was already used. Try again.", 401);
       }
       const token = randomBytes(32).toString("hex");
       q.pruneSessions.run(now());
-      q.putSession.run(token, wallet, now() + SESSION_TTL_MS);
-      return { token, wallet, profile: profile(wallet) };
+      q.putSession.run(token, wallet as string, now() + SESSION_TTL_MS);
+      return { token, wallet: wallet as string, profile: profile(wallet as string) };
     },
 
     /** The wallet behind a live session token, or null. */
